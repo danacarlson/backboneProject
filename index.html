@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>AQ075 Dynamic App Mobile</title>
+  <link rel="stylesheet" href="/cardmembersvcs/acqs/app/aq075/css/jquery.mobile-1.3.1.css">
+  <!-- Extra Codiqa features -->
+  <link rel="stylesheet" href="codiqa.ext.css">
+  <link rel="stylesheet" href="/cardmembersvcs/acqs/app/aq075/css/main.css">
+  <!-- jQuery and jQuery Mobile -->
+  <script src="/cardmembersvcs/acqs/app/aq075/scripts/vendor/jquery-1.9.1.min.js"></script>
+  <script src="/cardmembersvcs/acqs/app/aq075/scripts/vendor/jquery.mobile-1.3.1.min.js"></script>
+  <!-- Extra Codiqa features -->
+  <!--<script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script>-->
+  <!--<script src="/cardmembersvcs/acqs/app/aq075/scripts/dynapp-prototype.js"></script>-->
+</head>
+<body>
+  <!-- Segmented - Form (Default) -->
+  <div data-role="page" id="page16">
+    <!--<a href="#close" class="close-panel" id="close-panel">Close panel</a>-->
+
+    <!--Rates, Fees Panel-->
+    <div data-role="panel" id="ratesFeesPanel" data-display="overlay" data-position="right">
+      <a href="#close" class="close-panel"></a>
+      <div class="panel-bd">
+        <div class="rates-fees">
+          <h4>Rates, Rewards, Fees and more</h4>
+          <section class="info">
+            <ul class="orange-check">
+              <li>No Annual Fee</li>
+              <li><strong>0%</strong> Intro Purchase APR* for <strong>14 months</strong> on purchases and balance transfers</li>
+              <li>Then <strong>10.99% &ndash; 22.99%</strong> Standard Variable Purchase APR applies</li>
+              <li><strong>3%</strong> fee for each balance transferred</li>
+            </ul>
+            <a href="#ratesTerms">*See Important Information</a>
+          </section>
+          <section class="info">
+            <h5>Cash Rewards</h5>
+            <ul>
+              <li><strong>5% <em>Cashback Bonus</em></strong> in categories that change throughout the year, up to the quarterly maximum. Signing up each time is free and easy.</li>
+              <li><strong>1% <em>Caschback Bonus</em></strong> on all other purchases*</li>
+              <li><strong>Cashback Concierge<sup>SM</sup></strong> gives you 1-on-1 online tour to help you get the most out of your rewards based on how you use your credit card.</li>
+            </ul>
+          </section>
+          <section class="info">
+            <h5>Benefits</h5>
+            <ul>
+              <li>No annual fee</li>
+              <li>Paying late won't raise your APR</li>
+              <li>Pay your bill 'till midnight (ET) the day it's due online or by phone</li>
+              <li>If you lose your job call, we'll lower your interest rate, monthly payment or find another way to help</li>
+              <li>100% U.S. based customer service available any time</li>
+              <li>No late fee for your first late pament</li>
+            </ul>
+          </section>
+        </div>
+        <div id="ratesTerms" class="terms">
+          <h4>Important Information</h4>
+          <table>
+            <thead>
+              <th colspan="2">Interest Rates and Interest Charges</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="interest-type">Annual Percentage Rate (APR) For Purchases</td>
+                <td><strong class="big-text interest-block">0.00%</strong> <p class="interest-details">intro APR for 15 months from date of account opening. After the intro APR expires, your APR will be <strong class="big-text">10.99%</strong> to <span class="orange"><strong class="big-text">22.99%</strong>, based on your creditworthiness</span>. This APR will vary with the market based on the Prime Rate.</p></td>
+              </tr>
+              <tr>
+                <td class="interest-type">APR for Balance Transfers</td>
+                <td><strong class="big-text interest-block">0.00%</strong> <p class="interest-details">intro APR for 15 months from date of first transfer, for transfers under this offer that post to your account by September 10, 2012. After the intro APR expires, your APR will be <strong class="big-text">10.99%</strong> to <strong class="big-text">22.99%</strong> based on your creditworthiness. This APR will vary with the market based on the Prime Rate.</p></td>
+              </tr>
+              <tr>
+                <td class="interest-type">APR for Cash Advances</td>
+                <td><strong class="big-text interest-block">24.99%</strong> <p class="interest-details">This APR will vary with the market based on the Prime Rate.</p></td>
+              </tr>
+              <tr>
+                <td class="interest-type">Penalty APR and When It Applies</td>
+                <td><strong>None</strong></td>
+              </tr>
+              <tr>
+                <td class="interest-type">How to Avoid Paying Interest on Purchases</td>
+                <td>Your due date is at least 25 days after the close of each billing period (at least 23 days for billing periods that begin in February). We will not charge you any interest on purchases if you pay your entire balance by the due date each month.</td>
+              </tr>
+              <tr>
+                <td class="interest-type">Minimum Interest Charge</td>
+                <td>If you are charged interest, the charge will be no less than $.50.</td>
+              </tr>
+              <tr>
+                <td class="interest-type">For Credit Card Tips from the Consumer Financial Protection Bureau</td>
+                <td>To learn more about factors to consider when applying for or using a credit card, visit the website of the Consumer Financial Protection Bureau at <a href="http://www.consumerfinance.gov/learnmore" target="_blank">http://www.&#8203;consumerfinance.&#8203;gov/learnmore</a></td>
+              </tr>
+              <tr class="table-divider">
+                <td colspan="2"><span>Fees</span></td>
+              </tr>
+              <tr>
+                <td colspan="2" class="fee-header">Set-up and Maintenance Fees</td>
+              </tr>
+              <tr class="fee-info">
+                <td>Annual Fee</td>
+                <td><strong>None</strong></td>
+              </tr>
+              <tr>
+                <td colspan="2" class="fee-header">Transaction Fees</td>
+              </tr>
+              <tr class="fee-info">
+                <td>Balance Transfer</td>
+                <td><strong class="big-text">3%</strong> of the amount of each transfer.</td>
+              </tr>
+              <tr class="fee-info">
+                <td>Cash Advance</td>
+                <td>Either <strong class="big-text">10%</strong> or <strong class="big-text">5%</strong> of the amount of each cash advance, whichever is greater.</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="fee-header">Penalty Fees</td>
+              </tr>
+              <tr class="fee-info">
+                <td>Late Payment</td>
+                <td><strong>None</strong> the first time you pay late. After that, up to <strong>$35</strong>.</td>
+              </tr>
+              <tr class="fee-info">
+                <td>Returned Payment</td>
+                <td>Up to <strong>$35</strong>.</td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <p class="clause"><strong>HOW WE WILL CALCULATE YOUR BALANCE</strong>: We use a method called "daily balance (including new purchases)."</p>
+                  <p class="clause"><strong>HOW WE CALCULATE AND DETERMINE RATES</strong>: We calculate variable rates based on the Prime Rate by using the highest Prime Rate listed in The Wall Street Journal on the last business day of the month. For the purchase APR, we add from 7.74% to 19.74% to the Prime Rate based on your creditworthiness. Customers with the best credit profiles receive the lowest rate. For the cash advance APR, we add 21.74% to the Prime Rate.</p>
+                  <p class="clause"><strong>BALANCE TRANSFERS</strong>: This offer applies to balance transfers that post to your account by 7/10/2013. It takes at least 14 days after your account is opened to process payments to your other accounts. You may cancel a balance transfer at any time prior to that by calling 1-800-347-2683. Continue to make all required payments to your other accounts until you confirm that the balance transfers were made. Balance transfers may not be used to pay any Discover accounts and do not earn rewards. You may transfer any amount, up to your credit available for transfers, which may be less than your total credit line. If your balance transfer request will exceed your available credit, we will process your transfers for less than the amount requested, in the order requested. You may only make balance transfers to accounts that list you as an accountholder. There is no grace period on balance transfers. The minimum payment requirement can cause promotional balances to be paid in full prior to the end of the promotional period. You can avoid paying interest on new purchases if you pay your entire balance by the due date each month. This means that, unless your purchase APR is at a promotional 0% APR, you will pay interest on new purchases if you do not pay the balances you transfer under this offer in full by the first payment due date. See your Cardmember Agreement for details.</p>
+                  <p class="clause"><strong>PAYMENT ALLOCATION</strong>: We apply payments and credits at our discretion, including in a manner most favorable or convenient for us. Each billing period, we will generally apply amounts you pay that exceed the minimum payment due to balances with higher APRs before balances with lower APRs as of the date we credit your payment.</p>
+                  <p class="clause"><strong>APPLICATION INFORMATION</strong>: <strong>Federal law requires that we obtain certain information about you such as your date of birth and street address in order to verify your identity</strong>. You authorize us to receive and exchange information about you, including from your employer, your bank, credit bureaus and others for purposes of verifying your identity and the information on this application and determining your eligibility for credit, renewal of credit, and future extensions of credit. By providing your phone numbers on the application, you agree that Discover, its affiliates and agents, may call you at these numbers for service-related reasons. If this is a cell phone number you agree that we may contact you using a dialer for service-related reasons, including pre-recorded messages and/or text messages, even if your cell phone provider may charge you for calls according to your current plan. Upon your request, we will inform you of the name and address of each consumer reporting agency from which we obtained a consumer report relating to you. Offer only available to U.S. residents 18 and older. To apply with a joint applicant, write to us at PO Box 15410, Wilmington, DE 19850-5410. Every applicant, regardless of marital status, can apply for a separate account. THIS OFFER SUPERSEDES ALL PRIOR OFFERS. Terms of this offer, including fees and calculations of variable rates, are accurate as of March 29, 2013, and may change after that date. To find out what may have changed after that date, write to us at PO Box 15410, Wilmington, DE 19850-5410. Please allow 30 days for us to process your application.</p>
+                  <p class="clause"><strong>CREDIT LINE</strong>: Applicants may not request a specific credit line. If you are approved, your credit line will be at least $500 and along with other terms of the account, will be based on a review of the information you provide in this application and your consumer report; it may also include other information we may have bearing on your creditworthiness. Balance transfers made with an application are not considered to be a request for a particular credit line.</p>
+                  <p class="clause"><strong>CARDMEMBER AGREEMENT</strong>: You will receive a Cardmember Agreement with the Card. You agree that the Cardmember Agreement and the account are governed by Delaware and federal law. The terms of your account, including rates and fees, are subject to change, to the extent permitted by law. ARBITRATION: The Cardmember Agreement provides that we may choose to resolve a claim relating to your account by binding arbitration, in which case, you will not have the right to have that claim resolved by a judge or jury and you will not have the right to participate in a class action in court or arbitration. You may reject the arbitration provision with respect to your new account within 30 days after receiving your Card. Ohio Residents: Ohio laws against discrimination require that all creditors make credit equally available to all creditworthy customers, and that credit reporting agencies maintain separate credit histories on each individual upon request. The Ohio Civil Rights Commission administers compliance with this law. New York Residents: Call the New York State Banking Department at (877) 226-5697 for a comparative list of credit card rates, fees and grace period. Wisconsin Residents: No agreement, court order or individual statement applying to marital property will adversely affect a creditor's interests unless prior to the time credit is granted the creditor is furnished with a copy of the agreement, court order or statement, or has actual knowledge of the adverse provision. Married Wisconsin residents must furnish their spouse's name and address to us at PO Box 15410, Wilmington, DE 19850-5410.</p>
+                  <p class="clause"><strong>REWARDS</strong>: We will send full terms and conditions with your card. Each quarterly 5% program has a cap on category purchases and you must sign up for each program. The amount of the cap may change. 5% category purchases over the quarterly cap, and all other purchases, earn a full 1% cash back. Click here to see the current 5% program details.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <a href="#close" class="close-panel close-bottom">Close</a>
+      </div>
+    </div>
+
+    <!--Balance Transfer Panel-->
+    <div data-role="panel" id="balanceTransfer" class="bt-panel" data-display="overlay" data-position="right">
+      <a href="#close" class="close-panel" id="close-panel"></a> 
+        <div data-role="content">
+
+          <div class="bt-inputs">
+            <div class="top-content">
+              <h3>Balance Transfer</h3>
+            
+              <ul>
+                <li>Transfer up to three balances</li>
+                <li><strong>0%</strong> Intro APR for 14 months from date of first transfer, for transfers under this offer that post to your account by August 10, 2013</li>
+                <li>Then <strong>10.99%</strong> to <strong>22.99%</strong> Standard Variable Purchase APR, based on your creditworthiness</li>
+                <li><strong>3%</strong> Balance Transfer Fee for each balance transferred</li>
+              </ul>
+            
+              <a href="#" class="important-info">Important Information</a>
+            </div> 
+
+            <form id="btForm">
+              <div class="step-group initial-group" id="btGroup1"> 
+                <h3>Transfer 1</h3> <a href="#" class="inline-cta" data-trigger="removeTransfer">Remove</a>
+                <div data-role="fieldcontain" data-group="creditor1">
+                    <label for="">
+                        Creditor Name
+                    </label>
+                    <input name="" id="" placeholder="e.g. American Express" maxLength="28" value="" type="text" data-required data-validation="alpha hasData">
+                    <div class="icon"></div>
+                </div>
+
+                <div data-role="fieldcontain" data-group="accountNum1">
+                    <label for="">
+                        Account Number
+                    </label>
+                    <input name="" id="" placeholder="" value="" maxLength="25" type="tel" data-required data-validation="numeric">
+                    <div class="icon"></div>
+                </div>
+
+                <div data-role="fieldcontain" class="short" data-group="amount1">
+                    <label for="">
+                        Amount
+                    </label>
+                    <span class="pre-input">$</span> <input class="amount-field" name="" id="" placeholder="" value="" type="tel" data-required data-validation="dollarAmount hasData">
+                    <div class="icon"></div>
+                </div>
+              </div>
+            </form>
+          
+            <p><a href="#" data-trigger="add-transfer">Add Another Transfer</a></p>
+              
+             <div class="tally">
+              <ul>
+                <li><span class="text">Transfer Request</span> $<span class="tally-amount">0.00</span></li>
+                <li><span class="text">+ 3% Transfer Fee</span> $<span class="tally-percentage">0.00</span></li>
+                <li><span class="text">Total Amount of Transfer Request &amp; Fee</span> $<span class="tally-total">0.00</span></li>
+               </ul>
+            </div>
+
+            <a href="#" class="important-info">Important Information</a>
+            <p class="cta-directions">Continue to verify and save your balance transfer information.</p>
+            <a data-role="button" id="submitBT">
+                Next
+            </a> 
+            
+            <a href="#" class="close-bt">Cancel</a> 
+            
+            <div class='panel-footer'>
+              Connect with a live agent 24/7. <a href="#" type="tel">1-800-587-1605</a><br />
+              <span class="copyline">&copy;2013 Discover Bank, Member FDIC</span>
+            </div>
+          </div>
+          
+          <div class="bt-confirm hide">
+            <h3 class="intro-header">Verify Your Balance Transfer Request</h3>
+            <div class="group hide">
+              <div class="header">
+                <h3>Transfer 1</h3>
+              </div>
+              <h4>Creditor Name &amp; Address</h4>
+              <p><span class="input-value"></span><br />
+                P.O. Box 1207<br />
+                Newark, NJ 07101</p>
+
+              <dl>
+                <dt>Account Number</dt>
+                <dd>***********<span class="input-value mask"></span></dd>
+              </dl>
+
+              <div class="edit-remove">
+                <a href="#" class="inline-cta">Edit</a> | <a href="#" class="inline-cta">Remove</a>
+              </div> 
+              
+              <div class="transfer-value">
+                $<span class="input-value"></span>
+              </div>
+            </div>
+            
+            <div class="group hide">
+              <div class="header">
+                <h3>Transfer 2</h3>
+              </div>
+              <h4>Creditor Name &amp; Address</h4>
+              <p><span class="input-value"></span><br />
+                P.O. Box 1207<br />
+                Newark, NJ 07101</p>
+              <dl>
+                <dt>Account Number</dt>
+                <dd>***********<span class="input-value mask"></span></dd>
+              </dl>
+
+              <div class="edit-remove">
+                <a href="#" class="inline-cta">Edit</a> | <a href="#" class="inline-cta">Remove</a>
+              </div>
+
+              <div class="transfer-value">
+                $<span class="input-value"></span>
+              </div>
+
+            </div>
+             
+            <div class="group hide">
+              <div class="header">
+                <h3>Transfer 3</h3>
+              </div>
+              <h4>Creditor Name &amp; Address</h4>
+              <p><span class="input-value"></span><br />
+                 P.O. Box 1207<br />
+                 Newark, NJ 07101</p>
+
+              <dl>
+                <dt>Account Number</dt>
+                <dd>***********<span class="input-value mask"></span></dd>
+              </dl>
+
+              <div class="edit-remove">
+                <a href="#" class="inline-cta">Edit</a> | <a href="#" class="inline-cta">Remove</a>
+              </div>
+
+              <div class="transfer-value">
+                $<span class="input-value"></span>
+              </div>
+
+            </div>
+             
+            <div class="tally">
+              <ul>
+                <li><span class="text">Transfer Request</span> $<span class="tally-amount">0.00</span></li>
+                <li><span class="text">+ 3% Transfer Fee</span> $<span class="tally-percentage">0.00</span></li>
+                <li><span class="text">Total Amount of Transfer Request &amp; Fee</span> $<span class="tally-total">0.00</span></li>
+               </ul>
+            </div>
+            
+            <a href="#" class="important-info">Important Information</a>
+            <p class="save-note">Save to add these balance transfer requests and return to your application.</p>
+            <a data-role="button" id="confirmBT" >
+                Save
+            </a>
+
+            <a href="#" class="close-bt">Cancel</a>
+            
+            <div class='panel-footer'>
+              Connect with a live agent 24/7. <a href="#" type="tel">1-800-587-1605</a><br />
+              <span class="copyline">&copy;2013 Discover Bank, Member FDIC</span>
+            </div>
+          </div>
+
+    </div>
+
+
+    </div>
+
+    <div class="header-bar tablet">
+      <div class="header-logo"></div>
+      <ul>
+        <li>Connect with a live agent? <a href="#" type="tel">1-877-587-1605</a></li>
+        <li class="lock">This application is secure</li>
+      </ul>
+    </div>
+
+    <div class="content-wrap">
+      <div class="intro">
+        <img src="/cardmembersvcs/acqs/app/aq075/images/it-card-image.png" class="card-art" width="266" />
+        <h3>Get the treatment you deserve. Apply in minutes.</h3>
+        <p><a href="#" data-panelTrigger="ratesFeesPanel">Rates, Rewards, Fees and more</a></p>
+      </div>
+      <div data-role="content">
+        <div class="inner">
+          <h1>Discover it<sup>&reg;</sup> Card Application <span class="lock mobile">secure</span></h1>
+
+          <div class="menu-container"> 
+          <!--tablet menu-->
+           <div class="menu" data-pos>
+            <ul id="steps" class="tablet">
+              <li><a href="#" rel="step1" class="notDone">1. Name &amp; Contact Info<span class="status-notdone">TO DO</span><span class="status-done">DONE</span><span class="status-error">TO DO <span class="icon error"></span></span></a></li>
+              <li><a href="#" rel="step2" class="notDone">2. Financial Info<span class="status-notdone">TO DO</span><span class="status-done">DONE</span><span class="status-error">TO DO <span class="icon error"></span></span></a></li>
+              <li><a href="#" rel="step3" class="notDone">3. Security Info<span class="status-notdone">TO DO</span><span class="status-done">DONE</span><span class="status-error">TO DO <span class="icon error"></span></span></a></li>
+            </ul>
+          </div>
+          <!--tablet menu-->
+
+              <div data-role="form-set">
+                <form data-form="main-app">
+                  <h3 class="stepheader">
+                      <a href="" rel="step1" name="step1" class="notDone" >1. Name &amp; Contact Info<span class="status-notdone">TO DO</span><span class="status-done">DONE</span><span class="status-error">TO DO <span class="icon error"></span></span></a>
+                  </h3>
+                  <div id="step1" class="step-group hide">
+                      <div data-role="fieldcontain" data-group="first_name" >
+                          <label for="first_name">
+                              First Name
+                          </label>
+                          <input name="" id="first_name" maxLength="15" data-required data-validation="alpha" placeholder="" value="" type="text"><div class="icon"></div> 
+                      
+                        <p class="error-msg">Your first name is required. Please enter your first name using letters, hyphens and spaces only.</p>
+                      
+                      </div>
+                      <div data-role="fieldcontain" data-group="middle_name">
+                          <label for="middle_name">
+                              Middle Name <span>(Optional)</span>
+                          </label>
+                          <input name="" id="middle_name" maxLength="15" placeholder="" value="" type="text" data-validation="alpha"><div class="icon"></div>
+                        <p class="error-msg">Please enter your middle name using letters, hyphens and spaces only.</p>
+                      </div>
+                      <div data-role="fieldcontain" data-group="last_name" >
+                          <label for="last_name">
+                              Last Name
+                          </label>
+                          <input name="" id="last_name" maxLength="25" placeholder="" value="" type="text" data-required data-validation="alpha"><div class="icon"></div>
+                        <p class="error-msg">Your last name is required. Please enter your last name using letters, hyphens and spaces only.</p>
+                      </div>
+                      <div data-role="fieldcontain" data-group="suffix">
+                          <label for="suffix">
+                              Suffix <span>(Optional)</span>
+                          </label>
+                          <select id="suffix" name="" data-role="none" data-validation="dropdown">
+                              <option value="option1" class="default">
+                                  Please Select
+                              </option>
+                              <option value="Jr.">
+                                  Jr.
+                              </option>
+                              <option value="Sr.">
+                                  Sr.
+                              </option>
+                              <option value="II">
+                                  II
+                              </option>
+                              <option value="III">
+                                  III
+                              </option>
+                              <option value="IV">
+                                  IV
+                              </option>
+                              <option value="V">
+                                  V
+                              </option>
+                          </select><div class="icon not-required"></div>
+                      </div>
+                      <div data-role="fieldcontain" data-group="address_1" >
+                          <label for="address_1">
+                              Address 1
+                          </label>
+                          <input name="" id="address_1" placeholder="e.g. 5 Main Street" value=""
+                          type="text" maxLength="30" data-required data-validation="freeform">
+                          <p class="error-msg">Your address is required.</p>
+                          <p class="field-note">If you are a student, please enter your permanent address.</p>
+                          <div class="icon"></div>
+                      </div>
+                      <div data-role="fieldcontain" data-group="address_2">
+                          <label for="address_2">
+                              Address 2 <span>(Optional)</span>
+                          </label>
+                          <input name="" id="address_2" maxLength="30" placeholder="e.g. Apt. 15B" data-validation="freeform" value="" type="text"><div class="icon"></div>
+                      </div>
+                      <div data-role="fieldcontain" data-group="city" >
+                          <label for="city">
+                              City
+                          </label>
+                          <input name="" id="city" placeholder="" maxLength="20" data-required data-validation="alpha" value="" type="text"><div class="icon"></div>
+                          <p class="error-msg">Your city is required. Please enter your city using letters and spaces only.</p>
+                      </div>
+                      <div data-role="fieldcontain" data-group="state" >
+                          <label for="state">
+                              State
+                          </label>
+                          <select id="state" name="State" data-required data-validation="dropdown" data-role="none">
+                            <option value="" class="default">State</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="AA">Military Asia</option> 
+                            <option value="AE">Military Europe</option>
+                            <option value="AP">Military Pacific</option>
+                            <option value="GU">Guam</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="VI">US Virgin Islands</option>
+                            <option value="MH">Marshall Islands</option>
+                            <option value="AS">American Samoa</option>
+                            <option value="MP">Northern Mariana Islands</option>
+                            <option value="PW">Palau</option>
+                            <option value="FM">Federated States of Micronesia</option>                        
+                          </select><div class="icon"></div>
+                          <p class="error-msg">Your state is required.</p>
+                      </div>
+                      
+                       <div data-role="fieldcontain" data-group="zip" class="short" >
+                          <label for="zip">
+                              ZIP Code
+                          </label>
+                          <input name="" id="zip" data-required data-validation="numeric number=5" maxLength="5" placeholder="5-digit ZIP Code" value=""
+                          type="tel"><div class="icon"></div> 
+                          <p class="error-msg">Your zip code is required. Please enter your zip code using numbers only.</p>
+                      </div>
+                      <div data-role="fieldcontain" data-group="home_phone" >
+                          <label for="home_phone">
+                              Home Phone
+                          </label>
+                          <input name="" data-format-pattern="###-###-####" data-validation="phone" maxLength="12" data-required id="home_phone" placeholder="XXX-XXX-XXXX" value=""
+                          type="tel"><div class="icon"></div>
+                          <p class="error-msg">Your home phone is required. Please enter your home telephone number using numbers only.</p>
+                      </div>
+                      <div data-role="fieldcontain" data-group="email_input" >
+                          <label for="email_input">
+                              Email Address
+                          </label>
+                          <input name="" id="email_input" data-required data-validation="email" placeholder="email@domain.com" value=""
+                          type="email">
+                          <p class="field-note">Used to confirm receipt of your application and to delivery important information about your account and special offers.</p>
+                          <div class="icon"></div>
+                          <p class="error-msg">Your e-mail address is required. The e-mail address seems incorrect. Please review it and replace any missing “@” signs or periods.</p> 
+                          
+                      </div>
+                      
+                      <div class="add-cardholder-section">
+                        <a href="#" data-toggle='addcardholder'>Add Another Cardholder <span>(Optional)</span></a>
+                         
+                        <div class="add-cardholder-inputs hide">
+                          <h4>Additional Cardholder <a href="#" data-toggle="removecardholder">Remove</a></h4>
+                          <div data-role="fieldcontain" data-group="cardholder-firstName" >
+                              <label for="cardholder_firstName">
+                                  First Name
+                              </label>
+                              <input name="" id="cardholder_firstName" data-validation="alpha" placeholder="" value=""
+                              type="text"><div class="icon"></div>
+                          </div>
+                          <div data-role="fieldcontain" data-group="cardholder-middleName" >
+                              <label for="cardholder_middleName">
+                                  Middle Name <span>(Optional)</span>
+                              </label>
+                              <input name="" id="cardholder_middleName" data-validation="alpha" placeholder="" value=""
+                              type="text"><div class="icon"></div>
+                          </div>
+                          <div data-role="fieldcontain" data-group="cardholder-lastName" >
+                              <label for="cardholder_lastName">
+                                  Last Name
+                              </label>
+                              <input name="" id="cardholder_lastName" data-validation="alpha" placeholder="" value=""
+                              type="text"><div class="icon"></div>
+                          </div>
+                        </div>
+                     </div> 
+                      
+                  </div>
+                  <h3 class="stepheader">
+                    <a href="#" rel="step2" name="step2" class="notDone">2. Financial Info<span class="status-notdone">TO DO</span><span class="status-done">DONE</span><span class="status-error">TO DO <span class="icon error"></span></span></a>
+                  </h3>
+                  <div id="step2" class="step-group hide">
+                     
+                      <div data-role="fieldcontain"  data-group="employment">
+                          <label for="employment">
+                              Employment Status
+                          </label>
+                          <select id="employment" data-required data-validation="dropdown" name="" data-role="none">
+                              <option class="default" value="">
+                                  Please Select
+                              </option>
+                              <option value="F">
+                                  Employed Full-Time
+                              </option>
+                              <option value="P">
+                                  Employed Part-Time
+                              </option>
+                              <option value="S">
+                                  Self-Employed
+                              </option>
+                              <option value="U">
+                                  Unemployed
+                              </option>
+                              <option value="O">
+                                  Other
+                              </option>
+                              <option value="T">
+                                  Full-Time College Student
+                              </option>
+                          </select><div class="icon"></div> 
+                          <p class="error-msg">Your employment status is required.</p>
+                      </div>
+
+                      <div data-role="fieldcontain"  data-group="yearlyIncome">
+                          <label for="yearly_income">
+                              Total Yearly Income
+                          </label>
+                          <input name="" data-required data-validation="dollarAmount" maxLength="11" id="yearly_income" placeholder="$ Amount" value="" type="tel"
+                          >
+                          <p class="error-msg">A value is required for this field. If you have no yearly income, please enter “0”. Please enter your yearly income using numbers only. Your yearly income is not valid. Please enter an amount in whole dollars, with no decimal points or dollar signs (e.g. 1000).</p>
+                          <p class="field-note">Round to the nearest $100. If you do not have an income, please put "0".</p>
+                          <div class="icon"></div>
+                      </div>
+
+                      <div data-role="fieldcontain" data-group="education">
+                          <label for="education">
+                              Highest Level of Education <span>(Optional)</span>
+                          </label>
+                          <select id="education" name="" data-role="none">
+                              <option value="">
+                                  Please Select
+                              </option>
+                              <option value="O">
+                                  Less than a high school diploma
+                              </option>
+                              <option value="H">
+                                  High school diploma or GED
+                              </option>
+                              <option value="A">
+                                  Some college or associates degree
+                              </option>
+                              <option value="B">
+                                  Bachelor's Degree
+                              </option>
+                              <option value="G">
+                                  Advanced/Graduate Degree
+                              </option>
+                          </select><div class="icon"></div>
+                          
+                      </div>
+                      <div data-role="fieldcontain"  data-group="housingStatus">
+                          <label for="housing">
+                              Housing Status
+                          </label>
+                          <select id="housing" name="" data-required data-validation="dropdown" data-role="none">
+                              <option class="default" value="">
+                                  Please Select
+                              </option>
+                              <option value="O">
+                                  Own Home
+                              </option>
+                              <option value="R">
+                                  Rent
+                              </option>
+                              <option value="X">
+                                  Other
+                              </option>
+                          </select><div class="icon"></div>
+                          <p class="error-msg">Your housing status is required.</p>
+                      </div>
+
+                      <div data-role="fieldcontain"  data-group="housing">
+                          <label for="housing_payment">
+                              Monthly Housing/Rent Payment
+                          </label>
+                          <input name="" data-required data-validation="dollarAmount" id="housing_payment" placeholder="$ Amount" value="" type="tel"
+                          ><div class="icon"></div>
+                          <p class="error-msg">A value is required for this field. If you have no monthly housing payment, please enter “0”. Please enter your monthly housing payment using numbers only. Your monthly housing payment is not valid. Please enter an amount in whole dollars, with no decimal points or dollar signs (e.g. 1000).</p>
+                      </div>
+
+
+                      <div data-role="fieldcontain" class="very-short"  data-group="timeNumber">
+                          <label for="time_at_residence">
+                              Length of Time at Current Residence
+                          </label>
+                          <input name="" id="time_at_residence"data-required data-validation="numeric" placeholder="XX" value="" type="tel"><select id="time" name="" data-role="none">
+                              <option selected value="Years">
+                                  Years
+                              </option>
+                              <option value="Months">
+                                  Months
+                              </option>
+                          </select><div class="icon"></div>
+                          <p class="error-msg">Your length of time at current residence is required. Please enter your length of time at current residence using numbers only.</p>
+                      </div>
+                      <!--<div data-role="collapsible-set" class="simple-toggle">
+                          <div data-role="collapsible">
+                              <h3>
+                                  Income Details
+                              </h3>
+                              <div>
+                                  <p>
+                                      <span>
+                                          Your total yearly income can include, for example, current or reasonably
+                                          expected salary, wages, bonus pay, tips, commissions, interest, dividends,
+                                          retirement benefits and rental income.
+                                      </span>
+                                  </p>
+                                  <p>
+                                      <span>
+                                          <span>
+                                              You must have a total yearly income of at least $10,000 to be considered
+                                              for a Discover Card unless you are a full-time student.
+                                          </span>
+                                      </span>
+                                  </p>
+                                  <p>
+                                      <span>
+                                      </span>
+                                  </p>
+                                  <p>
+                                      <span>
+                                          <span>
+                                              Alimony, child support, or separate maintenance income need not be disclosed
+                                              if you do not wish to have it considered as a basis for repayment.
+                                          </span>
+                                      </span>
+                                  </p>
+                              </div>
+                          </div>
+                      </div>-->
+
+                      <div data-role="fieldcontain" data-group="account">
+                          <fieldset>
+                              <legend class="account-legend">
+                                  Do you have a Checking or Debit Account?
+                              </legend>
+                              <div class="radio-group">
+                                <input id="radio13" data-role="none" name="Do you have a Checking or Debit Account?" value="Yes"
+                                type="radio" data-required>
+                                <label for="radio13">
+                                    Yes
+                                </label>
+                                <input id="radio14" data-role="none" name="Do you have a Checking or Debit Account?" value="No"
+                                type="radio" data-required>
+                                <label for="radio14">
+                                    No
+                                </label>
+                              </div>
+                          </fieldset><div class="icon"></div>
+                          <p class="error-msg">Please indicate whether you have a checking account.</p>
+                      </div>
+                      <div data-role="fieldcontain" data-group="otherAccounts">
+                          <fieldset>
+                              <legend class="account-legend">
+                                  Do you have a Savings, IRA, or Money Market Account?
+                              </legend>
+                              <div class="radio-group">
+                                <input id="radio11" data-role="none" name="Do you have a Savings, IRA, or Money Market Account?"
+                                value="Yes" type="radio" data-required>
+                                <label for="radio11">
+                                    Yes
+                                </label>
+                                <input id="radio12" data-role="none" name="Do you have a Savings, IRA, or Money Market Account?"
+                                value="No" type="radio" data-required>
+                                <label for="radio12">
+                                    No
+                                </label>
+                              </div>
+                          </fieldset><div class="icon"></div>
+                          <p class="error-msg">Please indicate whether you have a savings account.</p>
+                      </div>
+                  </div>
+                  <h3 class="stepheader">
+                     <a href="#" rel="step3" name="step3" class="notDone">3. Security Info<span class="status-notdone">TO DO</span><span class="status-done">DONE</span><span class="status-error">TO DO <span class="icon error"></span></span></a>
+                  </h3>
+                  <div id="step3" class="step-group hide">
+                      
+                      <div data-role="fieldcontain"  class="short-year" data-group="dob">
+                          <label for="dob">
+                              Date of Birth
+                          </label>
+                          <input name="" id="dob" placeholder="MM/DD/YYYY" data-required data-validation="hasData" value="" type="date">
+                          <p class="error-msg">Your date of birth is required.</p>
+                          <p class="field-note">Federal Law requires us to obtain your date of birth to verify your identity.
+                                  You must be 18 or older to apply.</p>
+                          <div class="icon"></div>
+                          
+                      </div>
+
+                      <div data-role="fieldcontain"  data-group="maiden">
+                          <label for="maiden">
+                              Mother's Maiden Name
+                          </label>
+                          <input name="" id="maiden" data-required data-validation="alpha" placeholder="Last name only" value=""
+                          type="text">
+                          <p class="error-msg">Your mother's maiden name is required.</p>
+                          <p class="field-note">Your mother's maiden name is needed to verify your identity should you
+                                  contact us about your application or your account.</p>
+
+                          <div class="icon"></div> 
+                          
+                      </div>
+
+                      <div data-role="fieldcontain"  data-group="social">
+                          <label for="ssNum">
+                              Social Security Number
+                          </label>
+                          <input name="" id="ssNum" placeholder="XXX - XX - XXXX" value=""
+                          type="tel" data-required data-validation="fullSocial social" data-format-pattern="###-##-####">
+                          <p class="error-msg">Your social security number is required. Please enter your social security number using numbers only.</p>
+                          <p class="field-note">Federal Law requires us to obtain your Social Security number to verify
+                                  your identity.</p>
+                          <div class="icon"></div>
+                          
+                      </div>
+                  </div>
+                </form>
+
+                <div class="bt-placement">
+                  <a href="#" data-panelTrigger="balanceTransfer">Transfer Balances <span class="hint">(Optional)</span></a>
+                </div>
+                
+                 <div class="tally hide">
+                  <h4>Balance Transfer</h4>
+                  <div class="inner-tally">
+                    <ul>
+                      <li><span class="text">Transfer Request</span> $<span class="tally-amount">0.00</span></li>
+                      <li><span class="text">+ 3% Transfer Fee</span> $<span class="tally-percentage">0.00</span></li>
+                      <li><span class="text">Total Amount of Transfer Request &amp; Fee</span> $<span class="tally-total">0.00</span></li>
+                     </ul>
+
+                     <a href="#" data-panelTrigger="balanceTransfer">View or Edit Details</a>
+                  </div>
+                </div>
+
+                <div class="pg1-cta">
+                  <p class="continue-note hide">Continue to review important information.</p>
+                  <a data-role="button" data-shadow="false" href="" id="submit-form">Next</a>
+                </div>
+
+                <p class="mobile live-agent">Connect with a live agent 24/7<a href="#" type="tel">1-877-587-1605</a></p>
+
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="connect-footer tablet"><p>Connect with a live agent 24/7.<a href="#" type="tel">1-877-587-1605</a></p></div>
+      <div class="copyright"><p>&copy;2013 Discover Bank, Member FDIC</p></div>
+    </div>
+    
+  </div>
+  <!-- Segmented - Terms Overlay -->
+  <div data-role="page" id="page42">
+
+    <div class="header-bar tablet">
+      <div class="header-logo"></div>
+      <ul>
+        <li>Connect with a live agent? <a href="#" type="tel">1-877-587-1605</a></li>
+        <li class="lock">This application is secure</li>
+      </ul>
+    </div>
+      <div data-role="content">
+          <div>
+              <a href="#page16" data-transition="pop">
+                  Back to Application
+              </a>
+          </div>
+          <h3>
+              Terms &amp; Conditions
+          </h3>
+          <h4>
+              Interest Rates and Interest Charges
+          </h4>
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <div>
+                      <p>
+                          <span style="font-size: small;">
+                              <strong>
+                                  Annual Percentage Rate (APR) For Purchases
+                              </strong>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div>
+                      <p>
+                          <span style="font-size: small;" data-mce-style="font-size: small;">
+                              <strong>
+                                  0%
+                              </strong>
+                              intro APR for 14 months from date of account opening.
+                          </span>
+                      </p>
+                      <p>
+                          <span style="font-size: small;" data-mce-style="font-size: small;">
+                              After the intro APR expires, your APR will be
+                              <strong>
+                                  10.99%
+                              </strong>
+                              to
+                              <strong>
+                                  22.99%
+                              </strong>
+                              , based on your creditworthiness. This APR will vary with the market based
+                              on the Prime Rate.
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-a">
+                  <div>
+                      <p>
+                          <strong>
+                              <span style="font-size: small;" data-mce-style="font-size: small;">
+                                  APR for Balance Transfers
+                              </span>
+                          </strong>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div>
+                      <p>
+                          <span style="font-size: small;" data-mce-style="font-size: small;">
+                              <strong>
+                                  ﻿0%
+                              </strong>
+                              intro APR for 14 months from date of first transfer, for transfers under
+                              this offer that post to your account by August 10, 2013.
+                          </span>
+                      </p>
+                      <p>
+                          <span style="font-size: small;" data-mce-style="font-size: small;">
+                              After the intro APR expires, your APR will be
+                              <strong>
+                                  10.99% to 22.99%
+                              </strong>
+                              based on your creditworthiness. This APR will vary with the market based
+                              on the Prime Rate.
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-a">
+                  <div>
+                      <p>
+                          <strong>
+                              <span style="font-size: small;" data-mce-style="font-size: small;">
+                                  APR for Cash
+                                  <span id="_mce_caret" data-mce-bogus="1" style="">
+                                      <span style="font-size: small;" data-mce-bogus="1">
+                                          ﻿
+                                      </span>
+                                  </span>
+                                  Advances
+                              </span>
+                          </strong>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div>
+                      <p>
+                          <strong>
+                              <span style="font-size: small;" data-mce-style="font-size: small;">
+                                  <span class="schumerLargeText">
+                                      24.99%
+                                  </span>
+                                  &nbsp;
+                              </span>
+                          </strong>
+                          <br>
+                      </p>
+                      <p>
+                          <span style="font-size: small;">
+                              This APR will vary with the market based on the Prime Rate.
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-a">
+                  <div>
+                      <p>
+                          <span style="font-size: small;">
+                              <strong>
+                                  Penalty APR and When It Applies
+                              </strong>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div>
+                      <p>
+                          <strong>
+                              <span style="font-size: small;" data-mce-style="font-size: small;">
+                                  None
+                              </span>
+                          </strong>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-a">
+                  <div>
+                      <p>
+                          <strong>
+                              <span style="font-size: small;" data-mce-style="font-size: small;">
+                                  How to Avoid Paying Interest on Purchases
+                              </span>
+                          </strong>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div>
+                      <p>
+                          <span style="font-size: small;">
+                              Your due date is at least 25 days after the close of each billing period
+                              (at least 23 days for billing periods that begin in February). We will
+                              not charge you any interest on purchases if you pay your entire balance
+                              by the due date each month.
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-a">
+                  <div>
+                      <p>
+                          <strong>
+                              <span style="font-size: small;" data-mce-style="font-size: small;">
+                                  Minimum Interest Charge
+                              </span>
+                          </strong>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div>
+                      <p>
+                          <span style="font-size: small;">
+                              If you are charged interest, the charge will be no less than $
+                              <span id="disclosure-min-finance-charge">
+                                  0.50
+                              </span>
+                              .
+                          </span>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <div>
+                      <p>
+                          <span style="font-size: small;">
+                              <strong>
+                                  For Credit Card Tips from the Consumer Financial Protection Bureau
+                              </strong>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div>
+                      <p>
+                          <span style="font-size: small;">
+                              To learn more about factors to consider when applying for or using a credit
+                              card, visit the website of the Consumer Financial Protection Bureau at&nbsp;
+                              <span class="mainTitle" id="fedReserveUrl">
+                                  http://www.consumerfinance.gov/learnmore.
+                              </span>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <h3>
+              Fees
+          </h3>
+          <h4>
+              Set-up and Maintenance Fees
+          </h4>
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <div>
+                      <p>
+                          <strong>
+                              <span style="font-size: small;" data-mce-style="font-size: small;">
+                                  Annual Fee
+                              </span>
+                          </strong>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div>
+                      <p>
+                          <strong>
+                              <font size="2">
+                                  None.
+                              </font>
+                          </strong>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <h4>
+              Transaction Fees
+          </h4>
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <div>
+                      <p style="">
+                          <span style="font-size: small;" data-mce-style="font-size: small;">
+                              <strong>
+                                  Balance Transfer
+                              </strong>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div>
+                      <p>
+                          <span style="font-size: small;">
+                              <strong>
+                                  <span class="mainTitle">
+                                      3%
+                                  </span>
+                              </strong>
+                              &nbsp;of the amount of each transfer.
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-a">
+                  <div>
+                      <p style="">
+                          <strong>
+                              <span style="font-size: small;" data-mce-style="font-size: small;">
+                                  Cash Advance
+                              </span>
+                          </strong>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div>
+                      <p>
+                          <span style="font-size: small;">
+                              Either&nbsp;
+                              <strong>
+                                  <span class="mainTitle">
+                                      $10
+                                  </span>
+                              </strong>
+                              &nbsp;or&nbsp;
+                              <strong>
+                                  <span class="mainTitle">
+                                      5%
+                                  </span>
+                              </strong>
+                              &nbsp;of the amount of each cash advance, whichever is greater.
+                          </span>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <h4>
+              Penalty Fees
+          </h4>
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <div>
+                      <p style="" data-mce-style="">
+                          <span style="font-size: small;" data-mce-style="font-size: small;">
+                              <strong>
+                                  Late Payment
+                              </strong>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div>
+                      <p>
+                          <span style="font-size: small;">
+                              <strong>
+                                  <span class="schumerLargeText">
+                                      None
+                                  </span>
+                              </strong>
+                              <strong>
+                                  &nbsp;
+                              </strong>
+                              the first time you pay late. After that, up to&nbsp;
+                              <span class="mainTitle">
+                                  <strong>
+                                      $35
+                                  </strong>
+                                  .
+                              </span>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-a">
+                  <div>
+                      <p style="" data-mce-style="">
+                          <span style="font-size: small;">
+                              <strong>
+                                  Returned Payment
+                              </strong>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div>
+                      <p>
+                          <font size="2">
+                              Up to
+                              <strong>
+                                  $35
+                              </strong>
+                              .
+                          </font>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div>
+              <p>
+                  <span style="font-size: small;">
+                      <span class="bodySubtitle">
+                          <strong>
+                              HOW WE WILL CALCULATE YOUR BALANCE:
+                          </strong>
+                          &nbsp;
+                      </span>
+                      <span class="bodyText">
+                          We use a method called "daily balance (including new purchases)."
+                          <br>
+                          <br>
+                      </span>
+                      <span id="determine_rate">
+                          <strong>
+                              <span class="bodySubtitle">
+                                  HOW WE CALCULATE AND DETERMINE RATES:
+                              </span>
+                          </strong>
+                          <span class="bodyText">
+                              <strong>
+                                  &nbsp;
+                              </strong>
+                              We calculate variable rates based on the Prime Rate by using the highest
+                              U.S. Prime Rate listed in&nbsp;
+                              <i>
+                                  The Wall Street Journal
+                              </i>
+                              &nbsp;on the last business day of the month. For the purchase APR, we
+                              add from 7.74% to 19.74% to the Prime Rate based on your creditworthiness.
+                              Customers with the best credit profiles receive the lowest rate. For the
+                              cash advance APR, we add 21.74% to the Prime Rate.
+                          </span>
+                      </span>
+                  </span>
+                  <br>
+                  <br>
+                  <span style="font-size: small;">
+                      <span id="consumerBalAprs">
+                          <strong>
+                              <span class="bodySubtitle">
+                                  BALANCE TRANSFERS:
+                              </span>
+                          </strong>
+                          <span class="bodyText">
+                              <span id="disclosure-bt-apr-paragraph">
+                                  <strong>
+                                      &nbsp;
+                                  </strong>
+                                  This offer applies to balance transfers that post to your account by 8/10/2013.
+                                  It takes at least 14 days after your account is opened to process payments
+                                  to your other accounts. You may cancel a balance transfer at any time prior
+                                  to that by calling 1-800-347-2683. Continue to make all required payments
+                                  to your other accounts until you confirm that the balance transfers were
+                                  made. Balance transfers may not be used to pay any Discover accounts and
+                                  do not earn rewards. You may transfer any amount, up to your credit available
+                                  for transfers, which may be less than your total credit line. If your balance
+                                  transfer request will exceed your available credit, we will process your
+                                  transfers for less than the amount requested, in the order requested. You
+                                  may only make balance transfers to accounts that list you as an accountholder.
+                                  There is no grace period on balance transfers. The minimum payment requirement
+                                  can cause promotional balances to be paid in full prior to the end of the
+                                  promotional period. You can avoid paying interest on new purchases if you
+                                  pay your entire balance by the due date each month. This means that, unless
+                                  your purchase APR is at a promotional 0% APR, you will pay interest on
+                                  new purchases if you do not pay the balances you transfer under this offer
+                                  in full by the first payment due date. See your Cardmember Agreement for
+                                  details.
+                              </span>
+                              &nbsp;
+                              <br>
+                              <br>
+                          </span>
+                      </span>
+                      <strong>
+                          <span class="bodySubtitle">
+                              PAYMENT ALLOCATION:&nbsp;
+                          </span>
+                      </strong>
+                      <span class="bodyText">
+                          We apply payments and credits at our discretion, including in a manner
+                          most favorable or convenient for us. Each billing period, we will generally
+                          apply amounts you pay that exceed the minimum payment due to balances with
+                          higher APRs before balances with lower APRs as of the date we credit your
+                          payment.&nbsp;
+                          <br>
+                          <br>
+                      </span>
+                      <strong>
+                          <span class="bodySubtitle">
+                              APPLICATION INFORMATION:&nbsp;
+                          </span>
+                      </strong>
+                      <span class="bodyText">
+                          <span id="disclosure-app-info-paragraph">
+                              <strong>
+                                  Federal law requires that we obtain certain information about you such
+                                  as your date of birth and street address in order to verify your identity.
+                              </strong>
+                              <span class="AppInfostud">
+                              </span>
+                              &nbsp;You authorize us to receive and exchange information about you,
+                              including from your employer, your bank, credit bureaus and others for
+                              purposes of verifying your identity and the information on this application
+                              and determining your eligibility for credit, renewal of credit, and future
+                              extensions of credit. By providing your phone numbers on the application,
+                              you agree that Discover, its affiliates and agents, may call you at these
+                              numbers for service-related reasons. If this is a cell phone number you
+                              agree that we may contact you using a dialer for service-related reasons,
+                              including pre-recorded messages and/or text messages, even if your cell
+                              phone provider may charge you for calls according to your current plan.
+                              Upon your request, we will inform you of the name and address of each consumer
+                              reporting agency from which we obtained a consumer report relating to you.
+                              Offer only available to U.S. residents 18 and older.&nbsp;
+                              <span id="Joint_App">
+                                  To apply with a joint applicant, write to us at PO Box 15410, Wilmington,
+                                  DE 19850-5410. Every applicant, regardless of marital status, can apply
+                                  for a separate account. THIS OFFER SUPERSEDES ALL PRIOR OFFERS.
+                              </span>
+                              &nbsp;Terms of this offer, including fees and calculations of variable
+                              rates, are accurate as of&nbsp;
+                              <span class="appInfoDate">
+                                  4/30/2013
+                              </span>
+                              , and may change after that date.&nbsp;To find out what may have changed
+                              after that date, write to us at PO Box 15410, Wilmington, DE 19850-5410.
+                              Please allow 30 days for us to process your application.
+                              <br>
+                              <br>
+                          </span>
+                      </span>
+                      <span id="creditline">
+                          <strong>
+                              <span class="bodySubtitle">
+                                  CREDIT LINE:&nbsp;
+                              </span>
+                          </strong>
+                          <span class="bodyText">
+                              Applicants may not request a specific credit line. If you are approved,
+                              your credit line will be at least $500 and along with other terms of the
+                              account, will be based on a review of the information you provide in this
+                              application and your consumer report; it may also include other information
+                              we may have bearing on your creditworthiness. Balance transfers made with
+                              an application are not considered to be a request for a particular credit
+                              line.&nbsp;
+                              <br>
+                              <br>
+                          </span>
+                      </span>
+                      <strong>
+                          <span class="bodySubtitle">
+                              CARDMEMBER AGREEMENT:&nbsp;
+                          </span>
+                      </strong>
+                      <span class="bodyText">
+                          You will receive a Cardmember Agreement with the Card. You agree that
+                          the Cardmember Agreement and the account are governed by Delaware and federal
+                          law. The terms of your account, including rates and fees, are subject to
+                          change, to the extent permitted by law.&nbsp;
+                      </span>
+                      <span class="bodySubtitle">
+                          <strong>
+                              ARBITRATION
+                          </strong>
+                          :&nbsp;
+                      </span>
+                      <span class="bodyText">
+                          The Cardmember Agreement provides that we may choose to resolve a claim
+                          relating to your account by binding arbitration, in which case, you will
+                          not have the right to have that claim resolved by a judge or jury and you
+                          will not have the right to participate in a class action in court or arbitration.
+                          You may reject the arbitration provision with respect to your new account
+                          within 30 days after receiving your card.&nbsp;
+                      </span>
+                      <strong>
+                          <span class="bodySubtitle">
+                              Ohio Residents:&nbsp;
+                          </span>
+                      </strong>
+                      <span class="bodyText">
+                          Ohio laws against discrimination require that all creditors make credit
+                          equally available to all creditworthy customers, and that credit reporting
+                          agencies maintain separate credit histories on each individual upon request.
+                          The Ohio Civil Rights Commission administers compliance with this law.&nbsp;
+                      </span>
+                      <strong>
+                          <span class="bodySubtitle">
+                              New York Residents:&nbsp;
+                          </span>
+                      </strong>
+                      <span class="bodyText">
+                          Call the New York State Banking Department at (877) 226-5697 for a comparative
+                          list of credit card rates, fees and grace period.
+                      </span>
+                      &nbsp;
+                      <span class="bodySubtitle">
+                          <strong>
+                              Wisconsin Residents
+                          </strong>
+                          :&nbsp;
+                      </span>
+                      <span class="bodyText">
+                          No agreement, court order or individual statement applying to marital
+                          property will adversely affect a creditor's interests unless prior to the
+                          time credit is granted the creditor is furnished with a copy of the agreement,
+                          court order or statement, or has actual knowledge of the adverse provision.
+                          Married Wisconsin residents must furnish their spouse's name and address
+                          to us at PO Box 15410, Wilmington, DE 19850-5410.
+                          <br>
+                          <br>
+                      </span>
+                      <strong>
+                          <span class="bodySubtitle" id="rewardtitle">
+                              REWARDS:&nbsp;
+                          </span>
+                      </strong>
+                  </span>
+                  <span class="bodyText" id="rewards">
+                      <span id="disclosure-rewards-paragraph" style="font-size: small;">
+                          <span id="it-rewards">
+                              We will send full terms and conditions with your card. Each quarterly
+                              5% program has a cap on category purchases and you must sign up for each
+                              program. The amount of the cap may change. 5% category purchases over the
+                              quarterly cap, and all other purchases, earn a full 1% cash back.&nbsp;
+                              <a class="overlay-trigger" title="Click here" href="https://www.discovercard.com/cardmembersvcs/acqs/app/exec?dynaviewMain=INFO&amp;brand=MORE&amp;sc=KB48&amp;mboxSession=1369158659112-512720#universal-cbb-overlay"
+                              data-mce-href="https://www.discovercard.com/cardmembersvcs/acqs/app/exec?dynaviewMain=INFO&amp;brand=MORE&amp;sc=KB48&amp;mboxSession=1369158659112-512720#universal-cbb-overlay">
+                                  Click here
+                              </a>
+                              &nbsp;to see the current 5% program details.&nbsp;
+                          </span>
+                      </span>
+                      <br>
+                  </span>
+              </p>
+          </div>
+          <div>
+              <a href="#page16" data-transition="pop">
+                  Back to Application
+              </a>
+          </div>
+          <div>
+              <p>
+                  <span style="font-size: small;" data-mce-style="font-size: small;">
+                      ©2013 Discover Bank, Member FDIC
+                  </span>
+              </p>
+          </div>
+      </div>
+  </div>
+  <!-- Segmented - Card Info (Off-Canvas) -->
+  <div data-role="page" id="page32">
+      <div data-role="content">
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <a data-role="button" data-inline="true" data-direction="reverse" data-transition="slide"
+                  href="#page16" data-icon="arrow-l" data-iconpos="left">
+                      Back
+                  </a>
+              </div>
+              <div class="ui-block-b">
+                  <h3>
+                      Card Details
+                  </h3>
+              </div>
+          </div>
+          <div data-role="collapsible-set" data-theme="a" data-content-theme="b">
+              <div data-role="collapsible" data-collapsed="false">
+                  <h3>
+                      Offer Details
+                  </h3>
+                  <div>
+                      <p>
+                          <span style="font-size: small;" data-mce-style="font-size: small;">
+                          </span>
+                      </p>
+                      <p>
+                          <strong>
+                              Your Offer
+                          </strong>
+                      </p>
+                      <p>
+                          <strong>
+                              No Annual Fee
+                          </strong>
+                      </p>
+                      <p>
+                          <strong>
+                              0%
+                          </strong>
+                          &nbsp;Intro Purchase APR for&nbsp;15 months&nbsp;and then
+                          <strong>
+                              10.99%
+                          </strong>
+                          &nbsp;–
+                          <strong>
+                              19.99%
+                          </strong>
+                          &nbsp;Standard Variable Purchase APR
+                      </p>
+                      <p>
+                          <strong>
+                              0%
+                          </strong>
+                          &nbsp;
+                          <span size="2">
+                              Intro Balance Transfer APR for&nbsp;15 monthsand then&nbsp;
+                              <strong>
+                                  10.99%&nbsp;
+                              </strong>
+                          </span>
+                          <span size="2">
+                              –
+                              <strong>
+                                  19.99%
+                              </strong>
+                              &nbsp;
+                          </span>
+                          <span size="2">
+                              Standard Variable Purchase APR
+                          </span>
+                      </p>
+                      <p>
+                          <strong>
+                              3%
+                          </strong>
+                          &nbsp;Balance Transfer Fee for each balance transferred
+                      </p>
+                  </div>
+              </div>
+              <div data-role="collapsible">
+                  <h3>
+                      Rewards
+                  </h3>
+                  <div>
+                      <p>
+                          <strong>
+                              Your Cash Rewards
+                          </strong>
+                      </p>
+                      <p>
+                          <strong>
+                              5% Cashback Bonus
+                          </strong>
+                          &nbsp;in categories that change throughout the year like gas, restaurants,
+                          and department stores up to the quarterly maximum. Signing up each time
+                          is free and easy.
+                      </p>
+                      <p>
+                          <a href="#" data-mce-href="#">
+                              See 5% Cashback Calendar
+                          </a>
+                      </p>
+                      <p>
+                          <strong>
+                              5% to 20% Cashback Bonus
+                          </strong>
+                          &nbsp;through our exclusive online shopping mall
+                      </p>
+                      <p>
+                          <strong>
+                              1% Cashback Bonus
+                          </strong>
+                          &nbsp;on all other purchases—with no limit on how much you can earn.
+                      </p>
+                      <p>
+                          <strong>
+                              1-on-1 Cashback Concierge
+                          </strong>
+                          &nbsp;who can walk you through your rewards options online to help you
+                          get the most cash back for how you use your card.
+                      </p>
+                  </div>
+              </div>
+              <div data-role="collapsible">
+                  <h3>
+                      Benefits
+                  </h3>
+                  <div>
+                      <p>
+                          <strong>
+                              <span>
+                                  Get the Treatment You Deserve
+                              </span>
+                          </strong>
+                      </p>
+                      <p>
+                          <strong>
+                              Fair
+                              <br>
+                          </strong>
+                          No annual fee. No overlimit fee. No pay-by-phone fee. No foreign transaction
+                          fee. And no late fee for your first late payment. Plus we won't raise your
+                          APR for paying late.*
+                      </p>
+                      <p>
+                          <strong>
+                              Generous
+                              <br>
+                          </strong>
+                          Get real cash on every purchase – not points.
+                      </p>
+                      <p>
+                          <strong>
+                              Flexible
+                              <br>
+                          </strong>
+                          Choose your own due date and pay up to midnight (ET) online or by phone
+                          without a fee. And if you lose your job, we'll find a way to help.
+                      </p>
+                      <p>
+                          <strong>
+                              Human
+                              <br>
+                          </strong>
+                          Talk to a real person whenever you want. Our friendly service team here
+                          in the U.S. will answer your call in seconds.
+                      </p>
+                      <p>
+                          <strong>
+                              Safe
+                              <br>
+                          </strong>
+                          Discover ranks among the industry's highest in identity fraud resolution
+                          <sup>
+                              1
+                          </sup>
+                          . And you're never responsible for unauthorized purchases with our $0
+                          Fraud Liability Guarantee.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div>
+              <p>
+                  <b>
+                      <br>
+                  </b>
+              </p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Segmented - E-Sign -->
+  <div data-role="page" id="page31">
+
+    <div class="header-bar tablet">
+      <div class="header-logo"></div>
+      <ul>
+        <li>Connect with a live agent? <a href="#" type="tel">1-877-587-1605</a></li>
+        <li class="lock">This application is secure</li>
+      </ul>
+    </div>
+
+    <div class="content-wrap">
+      <div data-role="content">
+        <div class="inner">
+          <h1>Discover it<sup>&reg;</sup>Card Application <span class="lock mobile"></span></h1>
+          <div class="esign">
+            <div class="back-head">
+              <a data-direction="reverse" href="#page16" class="back-link">Back to Application</a>
+            </div>
+            <h3>Sign Up for Electronic Disclosures <span class="hint">(Optional)</span></h3>
+            <p class="directions">Receive your application decision electronically and, if approved, future disclosures and other important information about your Discover card Account.</p>
+            <p class="skip-step"><a href="#page43">No thanks, I’d like to skip this step</a></p>    
+            <div class="note"><p>Simply scroll down to read Important Information about receiving disclosures electronically and check to accept.</p></div>
+
+            <div class="terms-copy">
+              <p class="divider"> If you would like to receive your application decision electronically and, if approved, receive future disclosures and other important information about your Discover card Account electronically instead of paper, please read and accept the terms and conditions below. Please note that you are not signing up to receive statements by e-mail.</p>
+              <p>Please read the following important information about receiving disclosures electronically.</p>
+              <p>You agree that we may provide you with your application decision and, if approved, any disclosures, notices or other information (collectively "disclosures") legally required in connection with your Discover card Account electronically rather than in paper form. These disclosures include, but are not limited to, our privacy policy, change of terms notices, and amendments or addenda to the Cardmember Agreement or to the terms of any benefits, products, or services offered in connection with your Account. You have the right to receive these disclosures in paper form, and may at any time withdraw your consent to receive them electronically. There will be no fees or penalties for withdrawal of your consent. You can withdraw your consent, update your e-mail address or request a paper copy of a disclosure by e-mailing us through the Secure Message Center if you are a cardmember, or by calling 1-800-DISCOVER (1-800-347-2683). There is no fee for paper copies of disclosures.</p>
+
+              <p>Your application decision will be delivered on the next web page after submitting your application and you will have the ability to save it and print it out. If you are approved, your account disclosures will be delivered to you as a message at your Secure Message Center, or when indicated for some disclosures, be delivered to you on a web page on Account Center.</p>
+
+              <p>For the Secure Message Center, you will receive an e-mail notification at your e-mail address on file with us notifying you of a new message. If you use a spam filter, which blocks or re-routes e-mails from senders not listed in your e-mail address book, you must add "service@email.discover.com" to your e-mail address book. In addition, to ensure that you are able to receive notifications about new messages, you must keep your e-mail address current via the "My Profile" section on Discover.com. You can access the Secure Message Center by clicking on the link in the e-mail notification or by logging in to your account at discover.com. If you are unable to access the Secure Message Center, please call us at 1-800-DISCOVER (1-800-347-2683).</p>
+              <p>Each message on your Secure Message Center will be accessible for 120 days from delivery before it is deleted. After a message is opened by you, it will be accessible for 30 days before being deleted. You will have the ability to print out your messages.</p>
+
+              <p>To ensure you receive the necessary messages and disclosures, you must have a valid Internet e-mail address, Internet access and access to a printer. You must also have one of the following hardware/browser combinations, with cookies enabled and the following software:</p>
+
+              <p>Target Browsers Supported</p>
+              <ul>
+                <li>Microsoft<sup>&reg;</sup> Windows<sup>&reg;</sup></li>
+                <li>Internet Explorer 6.0 and above</li>
+                <li>Mozilla Firefox 1.5 and above</li>
+                <li>AOL version 9.0 with Microsoft IE 6.0</li>
+              </ul>
+
+              <ul>
+                <li>Macintosh<sup>&reg;</sup></li>
+                <li>Safari 2.0 and above</li>
+              </ul>
+
+              <ul>
+                <li>Software</li>
+                <li>Adobe Reader 8.0 and above</li>
+                <li>Flash Version 8.0 and above</li>
+                <li>JavaScript 1.0 and above</li>
+              </ul>
+
+              <p>We reserve the right to terminate this service, change terms of your use of this service or send disclosures in paper form at any time. We will provide you with notice of any such termination or change as required by law.</p>
+
+              <p>By clicking the "Yes, I accept" checkbox below, you certify that you consent to receive disclosures electronically and have the ability to do so. If you are approved, we will send you a confirmation email for signing up to receive electronic disclosures to the e-mail address you have provided us. If you do not recieve this confirmation e-mail within 48 hours, please contact us at 1-800-DISCOVER (1-800-347-2683) to verify your e-mail address.</p>
+            </div>
+            <div id="checkboxes10">
+              <fieldset class="floated">
+                  <input id="checkbox10" data-role="none" type="checkbox" />
+                  <div class="checkbox-copy">
+                    <label for="checkbox10"><span class="hint">(Optional)</span> <strong>I would like to receive my application decision, and if approved, future disclosures electronically</strong></label>
+                    <p>We will send you a confirmation e-mail to the e-mail address you have provided us. If you do not receive this e-mail within 48 hours please contact us at 800-XXX-XXXX to verify your e-mail address.</p>
+                  </div>
+              </fieldset>
+            </div>
+            <div class="cta-bot">
+
+              <p class="continue-directions">Continue to review important information</p>
+              <a data-role="button" data-theme="b" href="#page43">Continue</a>
+              <p class="back"><a href="#page43">No thanks, I’d like to skip this step</a></p> 
+              <p class="back"><a data-direction="reverse" href="#page16">Back</a></p>
+            </div>
+            <div class="connect-bot">
+              <p>Connect with a live agent 24/7 </br><a href="">1-877-587-1605</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="connect-footer tablet"><p>Connect with a live agent 24/7. <a href="#" type="tel">1-877-587-1605</a></p></div>
+      <div class="copyright"><p>&copy;2013 Discover Bank, Member FDIC</p></div>
+    </div>
+  </div>
+
+  <!-- Segmented - Balance Transfer -->
+  <div data-role="page" id="page40">
+      <div data-role="content">
+          <h2>
+              Transfer up to 3 Balances
+          </h2>
+          <div>
+              <p>
+                  <span style="font-size: small;" data-mce-style="font-size: small;">
+                      Enjoy 0% Intro APR for 14 months from date of first transfer, for transfers
+                      under this offer that post to your account by August 10, 2013 , then 10.99%
+                      to 22.99% Standard Variable Purchase APR, based on your creditworthiness.
+                  </span>
+              </p>
+              <p>
+                  <span style="font-size: small;" data-mce-style="font-size: small;">
+                      You can transfer a balance from major credit cards, department stores,
+                      gas cards or even auto or school loans. There is a 3% Transfer Fee for
+                      each balance transferred.
+                  </span>
+              </p>
+          </div>
+          <h3>
+              Transfer 1
+          </h3>
+          <div data-role="fieldcontain">
+              <label for="textinput154">
+                  Creditor Name
+              </label>
+              <input name="" id="textinput154" placeholder="" value="" type="text" data-mini="true">
+          </div>
+          <div data-role="fieldcontain">
+              <label for="textinput155">
+                  Account Number
+              </label>
+              <input name="" id="textinput155" placeholder="" value="" type="tel" data-mini="true">
+          </div>
+          <div data-role="fieldcontain">
+              <label for="textinput156">
+                  Transfer Amount
+              </label>
+              <input name="" id="textinput156" placeholder="$ " value="" type="tel"
+              data-mini="true">
+          </div>
+          <div>
+              <a href="" data-transition="fade">
+                  Add 2 More Transfers
+              </a>
+          </div>
+          <div>
+              <p>
+                  <b>
+                      <br>
+                  </b>
+              </p>
+          </div>
+          <div>
+              <p style="text-align: left;">
+                  Balance Transfer Request: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $0.00
+                  <br>
+                  + 3% Transfer Fee: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp;$0.00
+              </p>
+              <p>
+                  *TOTAL Amt.* of Transfer &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $0.00
+                  <br>
+                  Request &amp; Fee
+              </p>
+          </div>
+          <div>
+              <p>
+                  <b>
+                      <br>
+                  </b>
+              </p>
+          </div>
+          <a data-role="button" data-theme="b" href="#page41">
+              Next
+          </a>
+          <a data-role="button" data-direction="reverse" data-transition="pop" href="#page16">
+              Cancel
+          </a>
+      </div>
+  </div>
+
+  <!-- Balance Transfer: Verify -->
+  <div data-role="page" id="page41">
+    <div data-role="content" class="balance-transfer">
+      <a href="#page16" data-transition="pop">Back to Application</a>
+      <h2>Verify Your Balance<br />Transfer Request</h2>
+      <div class="verify-bt-request">
+        <ul class="transfer-nav">
+          <li><strong>Transfer 1</strong></li>
+          <li><a href="#">Edit</a></li>
+          <li><a href="#">Remove</a></li>
+        </ul>
+        <ul>
+          <li class="gray">Creditor Name &amp; Address</li>
+          <li>AMERICAN EXPRESS</li>
+          <li>P.O. Box 1270</li>
+          <li>Newark, NJ 07101</li>
+        </ul>
+        <div class="acct-info">
+          <ul>
+            <li class="gray">Account Number</li>
+            <li>************1234</li>
+          </ul>
+          <ul>
+            <li class="gray">Transfer Amount</li>
+            <li>$1,000</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <table class="bt-request-info">
+          <tr><th>Balance Transfer Request:</th><td>$7,000.00</td></tr>
+          <tr><th>+ 3% Transfer Fee:</th><td>$210.00</td></tr>
+          <tr class="total"><th>TOTAL Amt. of Transfer Request &amp; Fee</th><td>$7,210.00</td></tr>
+        </table>
+
+        <a href="#page42" data-transition="fade" class="secondary">Terms &amp; Conditions</a>
+        <p class="center">Save to add these balance transfer requests and return to your application.</p>
+        <a data-role="button" data-theme="b" href="#page44">Save</a>
+        <p class="center"><a data-direction="reverse" data-transition="pop" href="#page16">Cancel</a></p>
+      </div>
+    </div> 
+  </div>
+
+  <!-- Balance Transfer: Saving -->
+  <div data-role="page" id="page44">
+    <div data-role="content"  class="balance-transfer">
+      <div class="throbber-container">
+        <span class="throbber"></span><p>Saving...</p>
+      </div>
+      <p>One moment please while we save your Balance Transfer details.</p>
+    </div>
+  </div>
+
+  <!-- Segmented - T&amp;Cs -->
+  <div data-role="page" id="page43">
+
+    <div class="header-bar tablet">
+      <div class="header-logo"></div>
+      <ul>
+        <li>Connect with a live agent? <a href="#" type="tel">1-877-587-1605</a></li>
+        <li class="lock">This application is secure</li>
+      </ul>
+    </div>
+
+    <div class="content-wrap">
+      <div data-role="content">
+        <div class="inner">
+          <h1>Discover it<sup>&reg;</sup>Card Application <span class="lock mobile"></span></h1>
+          <div class="terms-pg">
+            <div class="back-head">
+              <a data-direction="reverse" href="#page16" class="back-link">Back to Application</a>
+            </div>
+            <h3>Submit Your Application</h3>
+            <p class="directions">Please carefully read the Important Information below which includes rates, fees, rewards, and other important information before submitting your application.</p>
+            <h4>Important Information</h4>
+            <div class="note"><p>Please scroll down to agree to important information and submit your application.</p></div>
+            <div class="terms">
+              <table>
+                <thead>
+                  <th colspan="2">Interest Rates and Interest Charges</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="interest-type">Annual Percentage Rate (APR) For Purchases</td>
+                    <td><strong class="big-text interest-block">0.00%</strong> <p class="interest-details">intro APR for 15 months from date of account opening. After the intro APR expires, your APR will be <strong class="big-text">10.99%</strong> to <span class="orange"><strong class="big-text">22.99%</strong>, based on your creditworthiness</span>. This APR will vary with the market based on the Prime Rate.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="interest-type">APR for Balance Transfers</td>
+                    <td><strong class="big-text interest-block">0.00%</strong> <p class="interest-details">intro APR for 15 months from date of first transfer, for transfers under this offer that post to your account by September 10, 2012. After the intro APR expires, your APR will be <strong class="big-text">10.99%</strong> to <strong class="big-text">22.99%</strong> based on your creditworthiness. This APR will vary with the market based on the Prime Rate.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="interest-type">APR for Cash Advances</td>
+                    <td><strong class="big-text interest-block">24.99%</strong> <p class="interest-details">This APR will vary with the market based on the Prime Rate.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="interest-type">Penalty APR and When It Applies</td>
+                    <td><strong>None</strong></td>
+                  </tr>
+                  <tr>
+                    <td class="interest-type">How to Avoid Paying Interest on Purchases</td>
+                    <td>Your due date is at least 25 days after the close of each billing period (at least 23 days for billing periods that begin in February). We will not charge you any interest on purchases if you pay your entire balance by the due date each month.</td>
+                  </tr>
+                  <tr>
+                    <td class="interest-type">Minimum Interest Charge</td>
+                    <td>If you are charged interest, the charge will be no less than $.50.</td>
+                  </tr>
+                  <tr>
+                    <td class="interest-type">For Credit Card Tips from the Consumer Financial Protection Bureau</td>
+                    <td>To learn more about factors to consider when applying for or using a credit card, visit the website of the Consumer Financial Protection Bureau at <a href="http://www.consumerfinance.gov/learnmore" target="_blank">http://www.&#8203;consumerfinance.&#8203;gov/learnmore</a></td>
+                  </tr>
+                  <tr class="table-divider">
+                    <td colspan="2"><span>Fees</span></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="fee-header">Set-up and Maintenance Fees</td>
+                  </tr>
+                  <tr class="fee-info">
+                    <td>Annual Fee</td>
+                    <td><strong>None</strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="fee-header">Transaction Fees</td>
+                  </tr>
+                  <tr class="fee-info">
+                    <td>Balance Transfer</td>
+                    <td><strong class="big-text">3%</strong> of the amount of each transfer.</td>
+                  </tr>
+                  <tr class="fee-info">
+                    <td>Cash Advance</td>
+                    <td>Either <strong class="big-text">10%</strong> or <strong class="big-text">5%</strong> of the amount of each cash advance, whichever is greater.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="fee-header">Penalty Fees</td>
+                  </tr>
+                  <tr class="fee-info">
+                    <td>Late Payment</td>
+                    <td><strong>None</strong> the first time you pay late. After that, up to <strong>$35</strong>.</td>
+                  </tr>
+                  <tr class="fee-info">
+                    <td>Returned Payment</td>
+                    <td>Up to <strong>$35</strong>.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <p class="clause"><strong>HOW WE WILL CALCULATE YOUR BALANCE</strong>: We use a method called "daily balance (including new purchases)."</p>
+                      <p class="clause"><strong>HOW WE CALCULATE AND DETERMINE RATES</strong>: We calculate variable rates based on the Prime Rate by using the highest Prime Rate listed in The Wall Street Journal on the last business day of the month. For the purchase APR, we add from 7.74% to 19.74% to the Prime Rate based on your creditworthiness. Customers with the best credit profiles receive the lowest rate. For the cash advance APR, we add 21.74% to the Prime Rate.</p>
+                      <p class="clause"><strong>BALANCE TRANSFERS</strong>: This offer applies to balance transfers that post to your account by 7/10/2013. It takes at least 14 days after your account is opened to process payments to your other accounts. You may cancel a balance transfer at any time prior to that by calling 1-800-347-2683. Continue to make all required payments to your other accounts until you confirm that the balance transfers were made. Balance transfers may not be used to pay any Discover accounts and do not earn rewards. You may transfer any amount, up to your credit available for transfers, which may be less than your total credit line. If your balance transfer request will exceed your available credit, we will process your transfers for less than the amount requested, in the order requested. You may only make balance transfers to accounts that list you as an accountholder. There is no grace period on balance transfers. The minimum payment requirement can cause promotional balances to be paid in full prior to the end of the promotional period. You can avoid paying interest on new purchases if you pay your entire balance by the due date each month. This means that, unless your purchase APR is at a promotional 0% APR, you will pay interest on new purchases if you do not pay the balances you transfer under this offer in full by the first payment due date. See your Cardmember Agreement for details.</p>
+                      <p class="clause"><strong>PAYMENT ALLOCATION</strong>: We apply payments and credits at our discretion, including in a manner most favorable or convenient for us. Each billing period, we will generally apply amounts you pay that exceed the minimum payment due to balances with higher APRs before balances with lower APRs as of the date we credit your payment.</p>
+                      <p class="clause"><strong>APPLICATION INFORMATION</strong>: <strong>Federal law requires that we obtain certain information about you such as your date of birth and street address in order to verify your identity</strong>. You authorize us to receive and exchange information about you, including from your employer, your bank, credit bureaus and others for purposes of verifying your identity and the information on this application and determining your eligibility for credit, renewal of credit, and future extensions of credit. By providing your phone numbers on the application, you agree that Discover, its affiliates and agents, may call you at these numbers for service-related reasons. If this is a cell phone number you agree that we may contact you using a dialer for service-related reasons, including pre-recorded messages and/or text messages, even if your cell phone provider may charge you for calls according to your current plan. Upon your request, we will inform you of the name and address of each consumer reporting agency from which we obtained a consumer report relating to you. Offer only available to U.S. residents 18 and older. To apply with a joint applicant, write to us at PO Box 15410, Wilmington, DE 19850-5410. Every applicant, regardless of marital status, can apply for a separate account. THIS OFFER SUPERSEDES ALL PRIOR OFFERS. Terms of this offer, including fees and calculations of variable rates, are accurate as of March 29, 2013, and may change after that date. To find out what may have changed after that date, write to us at PO Box 15410, Wilmington, DE 19850-5410. Please allow 30 days for us to process your application.</p>
+                      <p class="clause"><strong>CREDIT LINE</strong>: Applicants may not request a specific credit line. If you are approved, your credit line will be at least $500 and along with other terms of the account, will be based on a review of the information you provide in this application and your consumer report; it may also include other information we may have bearing on your creditworthiness. Balance transfers made with an application are not considered to be a request for a particular credit line.</p>
+                      <p class="clause"><strong>CARDMEMBER AGREEMENT</strong>: You will receive a Cardmember Agreement with the Card. You agree that the Cardmember Agreement and the account are governed by Delaware and federal law. The terms of your account, including rates and fees, are subject to change, to the extent permitted by law. <strong>ARBITRATION</strong>: The Cardmember Agreement provides that we may choose to resolve a claim relating to your account by binding arbitration, in which case, you will not have the right to have that claim resolved by a judge or jury and you will not have the right to participate in a class action in court or arbitration. You may reject the arbitration provision with respect to your new account within 30 days after receiving your Card. Ohio Residents: Ohio laws against discrimination require that all creditors make credit equally available to all creditworthy customers, and that credit reporting agencies maintain separate credit histories on each individual upon request. The Ohio Civil Rights Commission administers compliance with this law. New York Residents: Call the New York State Banking Department at (877) 226-5697 for a comparative list of credit card rates, fees and grace period. Wisconsin Residents: No agreement, court order or individual statement applying to marital property will adversely affect a creditor's interests unless prior to the time credit is granted the creditor is furnished with a copy of the agreement, court order or statement, or has actual knowledge of the adverse provision. Married Wisconsin residents must furnish their spouse's name and address to us at PO Box 15410, Wilmington, DE 19850-5410.</p>
+                      <p class="clause"><strong>REWARDS</strong>: We will send full terms and conditions with your card. Each quarterly 5% program has a cap on category purchases and you must sign up for each program. The amount of the cap may change. 5% category purchases over the quarterly cap, and all other purchases, earn a full 1% cash back. Click here to see the current 5% program details.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <form>
+              <div id="checkboxes11" data-group="terms" data-role="fieldcontain">
+                <fieldset class="floated">
+                    <input id="checkbox11" data-required="" data-role="none" type="checkbox" />
+                    <div class="checkbox-copy">
+                      <label for="checkbox11"><strong>I have read and agree to the Important Information above.</strong></label>
+                      <div class="icon"></div>
+                      <p>I certify that I am at least 18 years of age or older and a U.S. resident.</p>
+                    </div>
+                </fieldset>
+              </div>
+              <fieldset class="cta-bot">
+                <p>Submit and complete your application.</p>
+                <a id="submit-terms" data-role="button" data-theme="b" href="#page35">Submit Application</a>
+                <p class="back"><a data-direction="reverse" href="#page16">Back</a></p>
+              </fieldset>
+              <div class="connect-bot">
+                <p>Connect with a live agent 24/7 </br><a href="">1-877-587-1605</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="connect-footer tablet"><p>Connect with a live agent 24/7. <a href="#" type="tel">1-877-587-1605</a></p></div>
+      <div class="copyright"><p>&copy;2013 Discover Bank, Member FDIC</p></div>
+    </div>
+  </div>
+
+  <!-- Segmented - Done -->
+  <div data-role="page" id="page35">
+    <div class="header-bar tablet">
+      <div class="header-logo"></div>
+      <ul>
+        <li>Connect with a live agent? <a href="#" type="tel">1-877-587-1605</a></li>
+        <li class="lock">This application is secure</li>
+      </ul>
+    </div>
+    <div class="content-wrap">
+      <div data-role="content">
+        <div class="inner">
+          <h1>Discover it<sup>&reg;</sup>Card Application <span class="lock mobile"></span></h1>
+          <div class="done-pg">
+            <div class="card-img tablet"></div>
+            <h2><strong>Bartholemew,</strong> Congrats! You just got a Discover card.</h2>
+            <div class="card-img mobile"></div>
+            <p class="message">Thanks for choosing us. When your card arrives in the mail, call the number on the back to activate it. Then, start enjoying cashrewards on every purchase you make.</p>
+            <div class="connect-bot">
+              <p>Connect with a live agent 24/7 </br><a href="">1-877-587-1605</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="connect-footer tablet"><p>Connect with a live agent 24/7. <a href="#" type="tel">1-877-587-1605</a></p></div>
+      <div class="copyright"><p>&copy;2013 Discover Bank, Member FDIC</p></div>
+    </div>
+  </div>
+ 
+    <script src="/cardmembersvcs/acqs/app/aq_053/scripts/src/pubsub.js"></script>
+    <script src="/cardmembersvcs/acqs/app/aq_053/scripts/src/format_input.js"></script>
+    <script src="/scripts/src/discover/formHelpers.js"></script>
+    <script src="/scripts/src/discover/keypressRestrictions.js"></script> 
+    <script src="/cardmembersvcs/acqs/app/aq075/scripts/dynapp-prototype-validation.js"></script> 
+    <script src="/cardmembersvcs/acqs/app/aq075/scripts/dynapp-prototype-general.js"></script>
+</body>
+</html>
