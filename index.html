@@ -9,19 +9,32 @@
   <div class="container">
      <div class="inner">
       <h2>Candy Transfer</h2>
-    
-           
+            
       <form role="form">
-         
+        <div id="entry-container">
+        </div>
+
+
+        
+      
+        <!--<td><%= name %></td>
+        <td><%= age %></td>
+        <td><%= sex %></td>
+        <td class="bringing">Im bringing <%= bringing %></td>
+        <td><a href="#" data-trigger="edit">Edit</a> | <a href="#" data-trigger="remove">Remove</a></td>-->
+      
+        
+        <script type="text/template" id="single-entry">
          <div class="clearfix form-intro">
-             <h3 class="pull-left">Sugar Injection 1</h3>
-             <button type="button" class="btn btn-danger btn-xs pull-right">Remove</button>
+          <h3 class="pull-left">Sugar Injection 1</h3>
+          <button type="button" class="btn btn-danger btn-xs pull-right">Remove</button>
          </div>
        
          <div class="form-group">
-           <label for="">Candy Type</label>
-           <input name="" id="" class="form-control" placeholder="e.g. Nerd Rope" maxLength="28" value="" type="text">
+          <label for="">Candy Type</label>
+          <input name="" id="" class="form-control" placeholder="e.g. Nerd Rope" maxLength="28" value="<%= candyType %>" type="text">
          </div> 
+
          <div class="form-group">
            <label for="">Candy Profile</label>
            <select class="form-control">
@@ -47,13 +60,19 @@
             </select>
          </div>
          <div class="form-group">
+          
+            <span class="legend">Sweet</span><input type="range" min="1" max="10" value="0" class="form-control" /><span class="legend">Sour</span>
+         </div>
+
+         <div class="form-group">
            <label for="">Number of Pieces</label>
-           <input name="" class="form-control" id="" placeholder="" value="" maxLength="25" type="tel">            
+           <input name="" class="form-control" id="" placeholder="" value="<%= number %>" maxLength="25" type="tel">            
          </div>
          <div class="form-group">
            <label for="">US Dollar Amount</label>
-           $ <input class="form-control" name="" id="" placeholder="" value="" type="tel">                 
+           $ <input class="form-control" name="" id="" placeholder="" value="<%= dollarAmount %>" type="tel">                 
          </div>
+         </script>
       </form>
           
       <p><a href="#">+ Add Another Sugar Injection</a></p>
@@ -67,7 +86,7 @@
       </div> 
 
             
-    <p>Continue to verify and save your Candy Transfer.</p>
+    <p>Are you sure someone should eat all of that? Let's verify.</p>
     <button type="button" class="btn btn-primary">Next</button>
     <a href="#" class="close-bt">Cancel</a>
 
@@ -170,5 +189,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
   <script type="text/javascript" src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/models/models.js"></script>
+  <script src="/scripts/collections/transfers.js"></script>
+    <script src="/scripts/views/SugarInjectionView.js"></script>
+  <script src="/scripts/views/EntryView.js"></script>
+
+  
 </body>
 </html>
