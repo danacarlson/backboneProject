@@ -3,25 +3,31 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   entryTemplate: _.template($('#single-entry').html()),
   template: '',
   
-
   events: {
+    'click [data-trigger="remove-sugar-injection"]' : 'removeTransfer_onClick' 
+  },
+  
+
+  /*events: {
     'click [data-trigger="remove"]' : 'removeLink_onClick',
     'click [data-trigger="edit"]' : 'editLink_onClick',
     'click [data-trigger="cancelEdit"]' : 'cancelEdit_onClick',
     'click [data-trigger="saveChanges"]' : 'saveChanges_onClick'
-  },
+  },*/
 
   initialize: function() {
     this.template = this.entryTemplate;
   },
 
 
-  render: function (sugarModel) {
-    console.log(this.model);
+  render: function (sugarModel) { 
     this.$el.html(this.template(sugarModel.toJSON()));
-    
     return this;
   },
+  
+  'removeTransfer_onClick' : function() { 
+    console.log(this.model);
+  }
 
   /*'removeLink_onClick' : function() {
     this.model.destroy();
