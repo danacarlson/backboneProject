@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/candytransfer.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="main">
      <div class="inner">
       <h2>Candy Transfer</h2>
             
@@ -27,7 +27,7 @@
         <script type="text/template" id="single-entry">
          <div class="clearfix form-intro">
           <h3 class="pull-left">Sugar Injection 1</h3>
-          <button type="button" class="btn btn-danger btn-xs pull-right">Remove</button>
+          <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs pull-right">Remove</button>
          </div>
        
          <div class="form-group">
@@ -75,7 +75,7 @@
          </script>
       </form>
           
-      <p><a href="#">+ Add Another Sugar Injection</a></p>
+      <p><a href="#" data-trigger="add-sugar-injection">+ Add Another Sugar Injection</a></p>
               
       <div class="tally hide">
         <ul>
@@ -189,11 +189,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
   <script type="text/javascript" src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+  
   <script src="/scripts/main.js"></script>
   <script src="/scripts/models/models.js"></script>
   <script src="/scripts/collections/transfers.js"></script>
-    <script src="/scripts/views/SugarInjectionView.js"></script>
+  <script src="/scripts/views/SugarInjectionView.js"></script>
   <script src="/scripts/views/EntryView.js"></script>
+  <script src="/scripts/views/ApplicationView.js"></script>
+
 
   
 </body>
