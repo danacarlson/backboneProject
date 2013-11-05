@@ -22,9 +22,17 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   },
 
   onRemoveEntry: function (model) {
+    //var currentNum;
+    
     if (model === this.model) {
       this.model.destroy();
     }
+    
+    //console.log(this.$el);
+    
+    //currentNum = this.collection.length;
+
+    
   },
 
   removeTransfer_onClick: function(e) {
