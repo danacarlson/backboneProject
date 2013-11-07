@@ -4,7 +4,9 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   template: '',
   
   events: {
-    'click [data-trigger="remove-sugar-injection"]' : 'removeTransfer_onClick' 
+    'click [data-trigger="remove-sugar-injection"]' : 'removeTransfer_onClick',
+    'blur input' : 'setModel_onBlur',
+    'change select' : 'setModel_onBlur'
   },
 
   initialize: function() {
@@ -22,22 +24,22 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   },
 
   onRemoveEntry: function (model) {
-    //var currentNum;
-    
     if (model === this.model) {
       this.model.destroy();
     }
-    
-    //console.log(this.$el);
-    
-    //currentNum = this.collection.length;
-
-    
   },
 
   removeTransfer_onClick: function(e) {
     if (e) {  e.preventDefault(); } 
     this.collection.remove(this.model);
+  },
+  
+  setModel_onBlur : function (e) { 
+    var input = e.target,
+      obj = {}; 
+
+    obj[input.name] = $(input).val();
+    this.model.set(obj);
   }
 
 });

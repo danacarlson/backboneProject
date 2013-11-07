@@ -1,4 +1,7 @@
-.inner { max-width: 500px; }
+.inner {
+  max-width: 500px;
+  padding-bottom: 40px;
+ }
 .form-intro button {
   margin-top: 20px;
 }
@@ -32,3 +35,5 @@ input[type="range"]::-webkit-slider-thumb{
   font-weight: bold;
   padding-right: 1em;
 }
+
+

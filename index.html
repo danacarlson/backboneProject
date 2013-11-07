@@ -14,9 +14,6 @@
         <div id="entry-container">
         </div>
 
-
-        
-      
         <!--<td><%= name %></td>
         <td><%= age %></td>
         <td><%= sex %></td>
@@ -32,12 +29,12 @@
        
          <div class="form-group">
           <label for="">Candy Type</label>
-          <input name="" id="" class="form-control" placeholder="e.g. Nerd Rope" maxLength="28" value="<%= candyType %>" type="text">
+          <input id="" name="candyType" class="form-control" placeholder="e.g. Nerd Rope" maxLength="28" value="<%= candyType %>" type="text">
          </div> 
 
          <div class="form-group">
            <label for="">Candy Profile</label>
-           <select class="form-control">
+           <select class="form-control" name="candyProfile">
              <option>Nougat</option>
              <option>Chocolate</option>
              <option>Nuts</option>
@@ -61,16 +58,16 @@
          </div>
          <div class="form-group">
           
-            <span class="legend">Sweet</span><input type="range" min="1" max="10" value="0" class="form-control" /><span class="legend">Sour</span>
+            <span class="legend">Sweet</span><input type="range" name="sourRatio" min="1" max="10" value="0" class="form-control" /><span class="legend">Sour</span>
          </div>
 
          <div class="form-group">
            <label for="">Number of Pieces</label>
-           <input name="" class="form-control" id="" placeholder="" value="<%= number %>" maxLength="25" type="tel">            
+           <input name="number" class="form-control" id="" placeholder="" value="<%= number %>" maxLength="25" type="tel">            
          </div>
          <div class="form-group">
            <label for="">US Dollar Amount</label>
-           $ <input class="form-control" name="" id="" placeholder="" value="<%= dollarAmount %>" type="tel">                 
+           $ <input class="form-control" name="dollarAmount" id="" placeholder="" value="<%= dollarAmount %>" type="tel">                 
          </div>
          </script>
       </form>
