@@ -5,8 +5,8 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   
   events: {
     'click [data-trigger="remove-sugar-injection"]' : 'removeTransfer_onClick',
-    'blur input' : 'setModel_onBlur',
-    'change select' : 'setModel_onBlur'
+    'change input' : 'setModel_onChange',
+    'change select' : 'setModel_onChange'
   },
 
   initialize: function() {
@@ -34,7 +34,7 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
     this.collection.remove(this.model);
   },
   
-  setModel_onBlur : function (e) { 
+  setModel_onChange : function (e) { 
     var input = e.target,
       obj = {}; 
 

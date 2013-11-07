@@ -7,27 +7,18 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
   },
 
   initialize: function () { 
-    this.collection.on('add', this.onAddTransfer, this);
-    this.collection.on('remove', this.renumberTransfers, this);
+    this.listenTo(this.collection, 'add', this.onAddTransfer);
+    this.listenTo(this.collection, 'remove', this.renumberTransfers);
+
      
     if (this.collection.length === 0) {
       this.addBlankTransfer();
     }
   },
 
-  remove : function() {
-    this.collection.off('add', this.onAddTransfer);
-    this.collection.off('remove', this.renumberTransferes);
-  },
-
   addBlankTransfer: function(e) {
-    var currentNum = this.collection.length;
     if (e) {  e.preventDefault(); }     
-    if (currentNum < 5) {
-      this.collection.add({
-        'transferNumber' : currentNum+1
-      });
-    }
+      this.collection.addBlankTransfer();
   },
   
   renumberTransfers : function () { 
