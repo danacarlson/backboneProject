@@ -14,12 +14,36 @@
         <div id="entry-container">
         </div>
 
-        <!--<td><%= name %></td>
-        <td><%= age %></td>
-        <td><%= sex %></td>
-        <td class="bringing">Im bringing <%= bringing %></td>
-        <td><a href="#" data-trigger="edit">Edit</a> | <a href="#" data-trigger="remove">Remove</a></td>-->
-      
+        <script type="text/template" id="readonly-entry">
+          <div class="clearfix form-intro">
+           <h3 class="pull-left">Sugar Injection <%= transferNumber %></h3>
+           <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs pull-right">Edit</button>
+          </div>
+          
+          <div class="form-group">
+           <h4>Candy Type</h4>
+           <p><%= candyType %></p>
+          </div> 
+
+          <div class="form-group">
+            <h4>Candy Profile</h4>
+            <p><%= candyProfile %></p>
+          </div>
+          
+          <div class="form-group">
+             <span class="legend">Sweet</span><input readonly type="range" name="sourRatio" min="1" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>
+          </div>
+
+          <div class="form-group">
+            <h4>Number of Pieces</h4>
+            <p><%= number %></p>           
+          </div>
+          
+          <div class="form-group">
+            <h4>US Dollar Amount</h4>
+            <p>$ <%= dollarAmount %></p>                 
+          </div> 
+        </script>
         
         <script type="text/template" id="single-entry">
          <div class="clearfix form-intro">
@@ -58,7 +82,7 @@
          </div>
          <div class="form-group">
           
-            <span class="legend">Sweet</span><input type="range" name="sourRatio" min="1" max="10" value="0" class="form-control" /><span class="legend">Sour</span>
+            <span class="legend">Sweet</span><input type="range" name="sourRatio" min="1" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>
          </div>
 
          <div class="form-group">
@@ -84,7 +108,7 @@
 
             
     <p>Are you sure someone should eat all of that? Let's verify.</p>
-    <button type="button" class="btn btn-primary">Next</button>
+    <button type="button" class="btn btn-primary" id="confirmBt">Next</button>
     <a href="#" class="close-bt">Cancel</a>
 
             
@@ -186,6 +210,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
   <script type="text/javascript" src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.0/backbone.localStorage-min.js"></script>  
   
   <script src="/scripts/main.js"></script>
   <script src="/scripts/models/models.js"></script>
