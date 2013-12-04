@@ -36,4 +36,32 @@ input[type="range"]::-webkit-slider-thumb{
   padding-right: 1em;
 }
 
+.readonly-group {
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  background: #f1f1f1;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.readonly-group  .form-group {
+  overflow:hidden;
+}
+
+.readonly-group h3 {
+  margin-bottom: 25px;
+}
+
+.readonly-group h4 {
+  float: left;
+  width: 30%;
+  margin: 0;
+  font-size: 14px;
+ }
+ 
+.readonly-group .form-group p {
+  float: left;
+  width: 45%;
+}
+
 

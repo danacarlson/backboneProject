@@ -26,7 +26,28 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   
   rerender: function () {    
     $('#entry-container').append(this.readonlyTemplate(this.model.toJSON()));
+    this.setRatioOutput(this.model);
     return this;
+  },
+  
+  setRatioOutput : function (model) {
+    var ratio, dominant, $readonly = $('.readonly-group');
+    ratio = model.get('sourRatio') - 0;
+    if (ratio === 0) {
+      ratio = 5;
+      dominant = "Sweet";
+    }
+    
+    if (ratio > 5) {
+      dominant = "Sour";
+    }
+    else { 
+      ratio = 11 - ratio;
+      dominant = "Sweet"; 
+    };
+   $readonly.find('.ratio h4').html(dominant + ':');
+   $readonly.find('.ratio p').html(ratio + '/10');
+   
   },
   
   setSelects : function (model) {

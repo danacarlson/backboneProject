@@ -9,40 +9,45 @@
   <div class="container" id="main">
      <div class="inner">
       <h2>Candy Transfer</h2>
+      <p class="readonly hide">Here's what we have so far...</p>
             
       <form role="form">
         <div id="entry-container">
         </div>
 
         <script type="text/template" id="readonly-entry">
+        <div class="readonly-group">
           <div class="clearfix form-intro">
            <h3 class="pull-left">Sugar Injection <%= transferNumber %></h3>
            <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs pull-right">Edit</button>
           </div>
           
           <div class="form-group">
-           <h4>Candy Type</h4>
+           <h4>Candy Type:</h4>
            <p><%= candyType %></p>
           </div> 
 
           <div class="form-group">
-            <h4>Candy Profile</h4>
+            <h4>Candy Profile:</h4>
             <p><%= candyProfile %></p>
           </div>
           
-          <div class="form-group">
-             <span class="legend">Sweet</span><input readonly type="range" name="sourRatio" min="1" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>
+          <div class="form-group ratio">
+            <h4></h4>
+            <p></p>
+             <!--<span class="legend">Sweet</span><input readonly type="range" name="sourRatio" min="1" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>-->
           </div>
 
           <div class="form-group">
-            <h4>Number of Pieces</h4>
+            <h4>Number of Pieces:</h4>
             <p><%= number %></p>           
           </div>
           
           <div class="form-group">
-            <h4>US Dollar Amount</h4>
+            <h4>US Dollar Amount:</h4>
             <p>$ <%= dollarAmount %></p>                 
-          </div> 
+          </div>
+        </div> 
         </script>
         
         <script type="text/template" id="single-entry">
@@ -81,7 +86,7 @@
             </select>
          </div>
          <div class="form-group">
-          
+         
             <span class="legend">Sweet</span><input type="range" name="sourRatio" min="1" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>
          </div>
 
@@ -96,113 +101,12 @@
          </script>
       </form>
           
-      <p><a href="#" data-trigger="add-sugar-injection">+ Add Another Sugar Injection</a></p>
-              
-      <div class="tally hide">
-        <ul>
-          <li><span class="text">Transfer Request</span> $<span class="tally-amount">0.00</span></li>
-          <li><span class="text">+ 3% Transfer Fee</span> $<span class="tally-percentage">0.00</span></li>
-          <li><span class="text">Total Amount of Transfer Request &amp; Fee</span> $<span class="tally-total">0.00</span></li>
-         </ul> 
-      </div> 
-
-            
+    <p><a href="#" data-trigger="add-sugar-injection">+ Add Another Sugar Injection</a></p>
     <p>Are you sure someone should eat all of that? Let's verify.</p>
     <button type="button" class="btn btn-primary" id="confirmBt">Next</button>
     <a href="#" class="close-bt">Cancel</a>
 
-            
 
-
-          <div class="bt-confirm hide">
-            <h3 class="intro-header">Verify Your Balance Transfer Request</h3>
-            <div class="group">
-              <div class="header">
-                <h3>Transfer 1</h3>
-              </div>
-              <h4>Creditor Name &amp; Address</h4>
-              <p><span class="input-value"></span><br />
-                P.O. Box 1207<br />
-                Newark, NJ 07101</p>
-
-              <dl>
-                <dt>Account Number</dt>
-                <dd>***********<span class="input-value mask"></span></dd>
-              </dl>
-
-              <div class="edit-remove">
-                <a href="#" class="inline-cta">Edit</a> | <a href="#" class="inline-cta">Remove</a>
-              </div> 
-              
-              <div class="transfer-value">
-                $<span class="input-value"></span>
-              </div>
-            </div>
-            
-            <div class="group hide">
-              <div class="header">
-                <h3>Transfer 2</h3>
-              </div>
-              <h4>Creditor Name &amp; Address</h4>
-              <p><span class="input-value"></span><br />
-                P.O. Box 1207<br />
-                Newark, NJ 07101</p>
-              <dl>
-                <dt>Account Number</dt>
-                <dd>***********<span class="input-value mask"></span></dd>
-              </dl>
-
-              <div class="edit-remove">
-                <a href="#" class="inline-cta">Edit</a> | <a href="#" class="inline-cta">Remove</a>
-              </div>
-
-              <div class="transfer-value">
-                $<span class="input-value"></span>
-              </div>
-
-            </div>
-             
-            <div class="group hide">
-              <div class="header">
-                <h3>Transfer 3</h3>
-              </div>
-              <h4>Creditor Name &amp; Address</h4>
-              <p><span class="input-value"></span><br />
-                 P.O. Box 1207<br />
-                 Newark, NJ 07101</p>
-
-              <dl>
-                <dt>Account Number</dt>
-                <dd>***********<span class="input-value mask"></span></dd>
-              </dl>
-
-              <div class="edit-remove">
-                <a href="#" class="inline-cta">Edit</a> | <a href="#" class="inline-cta">Remove</a>
-              </div>
-
-              <div class="transfer-value">
-                $<span class="input-value"></span>
-              </div>
-
-            </div>
-             
-            <div class="tally">
-              <ul>
-                <li><span class="text">Transfer Request</span> $<span class="tally-amount">0.00</span></li>
-                <li><span class="text">+ 3% Transfer Fee</span> $<span class="tally-percentage">0.00</span></li>
-                <li><span class="text">Total Amount of Transfer Request &amp; Fee</span> $<span class="tally-total">0.00</span></li>
-               </ul>
-            </div>
-            
-            <a href="#" class="important-info">Important Information</a>
-            <p class="save-note">Save to add these balance transfer requests and return to your application.</p>
-            <a data-role="button" id="confirmBT" >
-                Save
-            </a>
-
-            <a href="#" class="close-bt">Cancel</a>
-            
-          </div>
    </div>
   </div>
 
