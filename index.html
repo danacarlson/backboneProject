@@ -19,7 +19,10 @@
         <div class="readonly-group">
           <div class="clearfix form-intro">
            <h3 class="pull-left">Sugar Injection <%= transferNumber %></h3>
-           <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs pull-right">Edit</button>
+           <span class="pull-right">
+            <button type="button" data-trigger="edit-sugar-injection" class="btn btn-xs">Edit</button>
+            <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs">Remove</button> 
+           </span>
           </div>
           
           <div class="form-group">
@@ -33,7 +36,9 @@
           </div>
           
           <div class="form-group ratio">
-            <h4></h4>
+            <h4>Sweet:</h4>
+            <p></p>
+            <h4>Sour:</h4>
             <p></p>
              <!--<span class="legend">Sweet</span><input readonly type="range" name="sourRatio" min="1" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>-->
           </div>
@@ -87,7 +92,7 @@
          </div>
          <div class="form-group">
          
-            <span class="legend">Sweet</span><input type="range" name="sourRatio" min="1" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>
+            <span class="legend">Sweet</span><input type="range" name="sourRatio" min="0" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>
          </div>
 
          <div class="form-group">

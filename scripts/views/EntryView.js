@@ -9,7 +9,8 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
     'change input, select' : 'input_onChange'
   },
 
-  initialize: function() { 
+  initialize: function() {
+    console.log('called'); 
     this.template = this.entryTemplate; 
     this.listenTo(this.collection, 'remove', this.onRemoveEntry);
   }, 
@@ -31,23 +32,11 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   },
   
   setRatioOutput : function (model) {
-    var ratio, dominant, $readonly = $('.readonly-group');
+    var ratio, $readonly = $('.readonly-group'),
+      $ratioNumbers = $readonly.find('.ratio p');
     ratio = model.get('sourRatio') - 0;
-    if (ratio === 0) {
-      ratio = 5;
-      dominant = "Sweet";
-    }
-    
-    if (ratio > 5) {
-      dominant = "Sour";
-    }
-    else { 
-      ratio = 11 - ratio;
-      dominant = "Sweet"; 
-    };
-   $readonly.find('.ratio h4').html(dominant + ':');
-   $readonly.find('.ratio p').html(ratio + '/10');
-   
+    $ratioNumbers.eq(0).html(10-ratio);
+    $ratioNumbers.eq(1).html(ratio);
   },
   
   setSelects : function (model) {
@@ -67,7 +56,7 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   },
 
   removeTransfer_onClick: function(e) {
-    if (e) {  e.preventDefault(); } 
+    if (e) {  e.preventDefault(); }
     this.collection.remove(this.model);
   },
   
