@@ -10,7 +10,7 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   },
 
   initialize: function() {
-    console.log('called'); 
+    this.setElement(this.el); 
     this.template = this.entryTemplate; 
     this.listenTo(this.collection, 'remove', this.onRemoveEntry);
   }, 
@@ -25,10 +25,9 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
     return this;
   },
   
-  rerender: function () {
-    //console.log(this.readonlyTemplate(this.model.toJSON()));
-    this.$el.html(this.readonlyTemplate(this.model.toJSON()));     
-    //$('#entry-container').append(this.readonlyTemplate(this.model.toJSON()));
+  rerender: function () { 
+    this.template = this.readonlyTemplate;
+    this.$el.html(this.template(this.model.toJSON()));
     this.setRatioOutput(this.model);
     return this;
   },
