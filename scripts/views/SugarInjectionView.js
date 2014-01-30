@@ -59,7 +59,12 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
 
   onAddTransfer : function (model) {  
       var view = new candyTransfer.Views.EntryView({ model: model, collection: this.collection });
-      view.render();
+      if ($(this.el).find('.readonly').hasClass('hide')) {
+        view.render();
+      }
+      else {
+        view.rerender();
+      }
       this.$el.find('#entry-container').append(view.el);
   }
 

@@ -6,7 +6,8 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   
   events: {
     'click [data-trigger="remove-sugar-injection"]' : 'removeTransfer_onClick',
-    'change input, select' : 'input_onChange'
+    'change input, select' : 'input_onChange',
+    'click [data-trigger="edit-single"]' : 'editTransfer_onClick'
   },
 
   initialize: function() {
@@ -25,19 +26,20 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
     return this;
   },
   
-  rerender: function () { 
+  rerender: function () {
     this.template = this.readonlyTemplate;
     this.$el.html(this.template(this.model.toJSON()));
     this.setRatioOutput(this.model);
     return this;
   },
   
-  setRatioOutput : function (model) {
-    var ratio, $readonly = $('.readonly-group'),
-      $ratioNumbers = $readonly.find('.ratio p');
-    ratio = model.get('sourRatio') - 0;
+  setRatioOutput : function (model) { 
+    var ratio, 
+      $ratioNumbers = this.$el.find('.ratio p');
+    ratio = model.get('sourRatio') - 0; 
+      
     $ratioNumbers.eq(0).html(10-ratio);
-    $ratioNumbers.eq(1).html(ratio);
+    $ratioNumbers.eq(1).html(ratio); 
   },
   
   setSelects : function (model) {
@@ -67,6 +69,14 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
 
     obj[input.name] = $(input).val();
     this.model.set(obj);
+  },
+  
+  editTransfer_onClick : function(e) { 
+    if (e) { e.preventDefault(); } 
+    this.template = this.entryTemplate;
+    this.$el.html(this.template(this.model.toJSON()));
+    this.setSelects(this.model);
+    return this;
   }
 
 });
