@@ -14,6 +14,14 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
     if (this.collection.length === 0) {
       this.addBlankTransfer();
     }
+    
+    this.render();
+  },
+  
+  render : function() { 
+    var staticControls = _.template( $("#sugar-injection-controls").html());
+      this.$el.find('#form-controls').append(staticControls);
+      return this;
   },
 
   addBlankTransfer: function(e) {
@@ -21,24 +29,19 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
     this.collection.addBlankTransfer();
   },
   
-  confirmTransfers: function() {
-    $(this.el).find('#entry-container').html('');
-    $(this.el).find('.readonly').removeClass('hide');
-     this.collection.each(function (transfer) { this.renderReadOnly(transfer); }, this);
-     return this;
+  confirmTransfers: function(model) {
+    var confirmView;
+    $(this.el).find('#entry-container, #form-controls').html('');
+    confirmView = new candyTransfer.Views.SugarInjectionConfirm({ model: model, collection: this.collection });
+    
+    return this;
   },
   
-  renderReadOnly : function(transfer) {    
-    var view = new candyTransfer.Views.EntryView({model: transfer, collection: this.collection}); 
-    view.rerender();
-    this.$el.find('#entry-container').append(view.el);
-  },
-  
-  saveTransfers : function (e) {
+  /*saveTransfers : function (e) {
     if (e) { e.preventDefault(); }
     //ideally there would be some front end validation here
     //Backbone.sync('create', this.collection);
-  },
+  }, */
   
   renumberTransfers : function () { 
     this.$el.find('#entry-container').html('');
@@ -59,12 +62,7 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
 
   onAddTransfer : function (model) {  
       var view = new candyTransfer.Views.EntryView({ model: model, collection: this.collection });
-      if ($(this.el).find('.readonly').hasClass('hide')) {
-        view.render();
-      }
-      else {
-        view.rerender();
-      }
+      view.render();
       this.$el.find('#entry-container').append(view.el);
   }
 

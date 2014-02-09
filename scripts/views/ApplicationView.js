@@ -2,6 +2,7 @@ candyTransfer.Views.ApplicationView = Backbone.View.extend({
 
   views: {
     'sugarInjection' : ''
+    //'sugarInjectionConfirm' : ''
   },
 
   initialize: function () {
@@ -14,6 +15,7 @@ candyTransfer.Views.ApplicationView = Backbone.View.extend({
       opts = {collection: this.collection}; 
 
     this.views.sugarInjection = new V.SugarInjectionView(opts);
+    //this.views.sugarInjectionConfirm = new V.SugarInjectionConfirm(opts);
   }
   
 });

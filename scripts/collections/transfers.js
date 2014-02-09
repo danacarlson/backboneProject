@@ -3,7 +3,6 @@ candyTransfer.Collections.Transfers = Backbone.Collection.extend({
   localStorage: new Backbone.LocalStorage('candyTransfer'),
   maxNumberTransfers : 5,
 
-
   addBlankTransfer: function() {
     var currentNum = this.length;
 

@@ -9,18 +9,20 @@
   <div class="container" id="main">
      <div class="inner">
       <h2>Candy Transfer</h2>
-      <p class="readonly hide">Here's what we have so far...</p>
+      <script type="text/template" id="sugar-injection-confirm-header"> 
+       <p>Here's what we have so far...</p>
+      </script>
             
       <form role="form">
         <div id="entry-container">
         </div>
 
-        <script type="text/template" id="readonly-entry">
+        <script type="text/template" id="confirm-entry">
         <div class="readonly-group">
           <div class="clearfix form-intro">
            <h3 class="pull-left">Sugar Injection <%= transferNumber %></h3>
            <span class="pull-right">
-            <button type="button" data-trigger="edit-single" class="btn btn-xs">Edit</button>
+            <!--<button type="button" data-trigger="edit-single" class="btn btn-xs">Edit</button>-->
             <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs">Remove</button> 
            </span>
           </div>
@@ -104,12 +106,26 @@
            $ <input class="form-control" name="dollarAmount" id="" placeholder="" value="<%= dollarAmount %>" type="tel">                 
          </div>
          </script>
+         
+         <div id="form-controls">
+         </div> 
+         
+         <script type="text/template" id="sugar-injection-controls">
+           <p><a href="#" data-trigger="add-sugar-injection">+ Add Another Sugar Injection</a></p>
+           <p>Are you sure someone should eat all of that? Let's verify.</p>
+           <button type="button" class="btn btn-primary" id="confirmBt">Next</button>
+           <a href="#">Start Over</a>
+         </script>
+
+         <script type="text/template" id="sugar-injection-confirm-controls">
+           <button type="button" class="btn btn-primary" id="saveTransfers">Save</button>
+           <a href="#">Back</a> 
+         </script>  
+        
+
       </form>
           
-    <p><a href="#" data-trigger="add-sugar-injection">+ Add Another Sugar Injection</a></p>
-    <p>Are you sure someone should eat all of that? Let's verify.</p>
-    <button type="button" class="btn btn-primary" id="confirmBt">Next</button>
-    <a href="#" class="close-bt">Cancel</a>
+
 
 
    </div>
@@ -125,7 +141,9 @@
   <script src="/scripts/models/models.js"></script>
   <script src="/scripts/collections/transfers.js"></script>
   <script src="/scripts/views/SugarInjectionView.js"></script>
+  <script src="/scripts/views/SugarInjectionConfirm.js"></script>
   <script src="/scripts/views/EntryView.js"></script>
+  <script src="/scripts/views/ConfirmView.js"></script>
   <script src="/scripts/views/ApplicationView.js"></script>
 
 

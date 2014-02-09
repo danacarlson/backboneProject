@@ -1,30 +1,32 @@
-candyTransfer.Views.EntryView = Backbone.View.extend({
+candyTransfer.Views.ConfirmView = Backbone.View.extend({
     
-  template : _.template($('#single-entry').html()),
-  
+  template: _.template($('#confirm-entry').html()),
+
   events: {
-    'click [data-trigger="remove-sugar-injection"]' : 'removeTransfer_onClick',
-    'change input, select' : 'input_onChange',
-    'click [data-trigger="edit-single"]' : 'editTransfer_onClick'
+    'click [data-trigger="remove-sugar-injection"]' : 'removeTransfer_onClick'
+    //'change input, select' : 'input_onChange',
+    //'click [data-trigger="edit-single"]' : 'editTransfer_onClick'
   },
 
   initialize: function() {
-    this.setElement(this.el); 
-    //this.listenTo(this.collection, 'remove', this.renumberTransfers); 
-    this.listenTo(this.collection, 'remove', this.onRemoveEntry);
+    this.setElement(this.el);
+    this.render(); 
+    //this.template = this.entryTemplate; 
+    //this.listenTo(this.collection, 'remove', this.onRemoveEntry);
   }, 
 
-  remove: function() {
-    this.collection.off('remove', this.onRemoveEntry);
-  },
 
   render: function () { 
+    /*this.collection.each(function(entry) { // iterate through the collection
+      var contactView = new ContactView({model: entry}); 
+      self.$el.append(contactView.el);
+    });  */
     this.$el.html(this.template(this.model.toJSON()));
     this.setSelects(this.model);
     return this;
   },
   
-  /*rerender: function () {
+ /* rerender: function () {
     this.template = this.readonlyTemplate;
     this.$el.html(this.template(this.model.toJSON()));
     this.setRatioOutput(this.model);
@@ -58,6 +60,8 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
 
   removeTransfer_onClick: function(e) {
     if (e) {  e.preventDefault(); }
+   // console.log(this.model);
+   // console.log(this.collection);
     this.collection.remove(this.model);
   },
   
@@ -71,10 +75,10 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   
   editTransfer_onClick : function(e) { 
     if (e) { e.preventDefault(); } 
-   /* this.template = this.entryTemplate;
+    this.template = this.entryTemplate;
     this.$el.html(this.template(this.model.toJSON()));
     this.setSelects(this.model);
-    return this;  */
+    return this;
   }
 
 });
