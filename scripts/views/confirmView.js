@@ -4,35 +4,19 @@ candyTransfer.Views.ConfirmView = Backbone.View.extend({
 
   events: {
     'click [data-trigger="remove-sugar-injection"]' : 'removeTransfer_onClick'
-    //'change input, select' : 'input_onChange',
-    //'click [data-trigger="edit-single"]' : 'editTransfer_onClick'
   },
 
   initialize: function() {
     this.setElement(this.el);
-    this.render(); 
-    //this.template = this.entryTemplate; 
-    //this.listenTo(this.collection, 'remove', this.onRemoveEntry);
+    this.render();
   }, 
 
-
   render: function () { 
-    /*this.collection.each(function(entry) { // iterate through the collection
-      var contactView = new ContactView({model: entry}); 
-      self.$el.append(contactView.el);
-    });  */
     this.$el.html(this.template(this.model.toJSON()));
-    this.setSelects(this.model);
+    //this.setSelects(this.model);
     return this;
   },
-  
- /* rerender: function () {
-    this.template = this.readonlyTemplate;
-    this.$el.html(this.template(this.model.toJSON()));
-    this.setRatioOutput(this.model);
-    return this;
-  },*/
-  
+ 
   setRatioOutput : function (model) { 
     var ratio, 
       $ratioNumbers = this.$el.find('.ratio p');
@@ -42,7 +26,7 @@ candyTransfer.Views.ConfirmView = Backbone.View.extend({
     $ratioNumbers.eq(1).html(ratio); 
   },
   
-  setSelects : function (model) {
+  /*setSelects : function (model) {
     var $selects = this.$el.find('select'),
       prop;
       
@@ -52,20 +36,18 @@ candyTransfer.Views.ConfirmView = Backbone.View.extend({
     });
   },
 
-  onRemoveEntry: function (model) {
+  /*onRemoveEntry: function (model) {
     if (model === this.model) {
       this.model.destroy();
     } 
-  },
+  },*/
 
   removeTransfer_onClick: function(e) {
     if (e) {  e.preventDefault(); }
-   // console.log(this.model);
-   // console.log(this.collection);
     this.collection.remove(this.model);
-  },
+  }
   
-  input_onChange : function (e) {
+  /*input_onChange : function (e) {
     var input = e.target,
       obj = {}; 
 
@@ -79,7 +61,7 @@ candyTransfer.Views.ConfirmView = Backbone.View.extend({
     this.$el.html(this.template(this.model.toJSON()));
     this.setSelects(this.model);
     return this;
-  }
+  }*/
 
 });
  

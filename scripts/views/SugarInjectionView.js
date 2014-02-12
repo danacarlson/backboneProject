@@ -37,12 +37,6 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
     return this;
   },
   
-  /*saveTransfers : function (e) {
-    if (e) { e.preventDefault(); }
-    //ideally there would be some front end validation here
-    //Backbone.sync('create', this.collection);
-  }, */
-  
   renumberTransfers : function () { 
     this.$el.find('#entry-container').html('');
     

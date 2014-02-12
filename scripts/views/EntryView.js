@@ -9,27 +9,15 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   },
 
   initialize: function() {
-    this.setElement(this.el); 
-    //this.listenTo(this.collection, 'remove', this.renumberTransfers); 
+    this.setElement(this.el);
     this.listenTo(this.collection, 'remove', this.onRemoveEntry);
   }, 
-
-  remove: function() {
-    this.collection.off('remove', this.onRemoveEntry);
-  },
 
   render: function () { 
     this.$el.html(this.template(this.model.toJSON()));
     this.setSelects(this.model);
     return this;
   },
-  
-  /*rerender: function () {
-    this.template = this.readonlyTemplate;
-    this.$el.html(this.template(this.model.toJSON()));
-    this.setRatioOutput(this.model);
-    return this;
-  },*/
   
   setRatioOutput : function (model) { 
     var ratio, 
