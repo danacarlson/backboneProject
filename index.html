@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head> 
+<head>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/candytransfer.css">
 </head>
 <body>
@@ -11,34 +11,45 @@
       <h2>Candy Transfer</h2>
       <div id="form-header">
       </div>
-      <script type="text/template" id="sugar-injection-confirm-header"> 
-       <p>Here's what we have so far...</p>
-      </script>
-            
+
       <form role="form">
         <div id="entry-container">
         </div>
 
-        <script type="text/template" id="confirm-entry">
+
+
+         <div id="form-controls">
+         </div>
+
+      </form>
+
+
+
+
+   </div>
+  </div>
+
+
+      <script type="text/template" id="confirm-entry">
         <div class="readonly-group">
           <div class="clearfix form-intro">
            <h3 class="pull-left">Sugar Injection <%= transferNumber %></h3>
            <span class="pull-right">
             <!--<button type="button" data-trigger="edit-single" class="btn btn-xs">Edit</button>-->
-            <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs">Remove</button> 
+            <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs">Remove</button>
            </span>
           </div>
-          
+
           <div class="form-group">
            <h4>Candy Type:</h4>
            <p><%= candyType %></p>
-          </div> 
+          </div>
 
           <div class="form-group">
             <h4>Candy Profile:</h4>
             <p><%= candyProfile %></p>
           </div>
-          
+
           <div class="form-group ratio">
             <h4>Sweet:</h4>
             <p></p>
@@ -49,26 +60,26 @@
 
           <div class="form-group">
             <h4>Number of Pieces:</h4>
-            <p><%= number %></p>           
+            <p><%= number %></p>
           </div>
-          
+
           <div class="form-group">
             <h4>US Dollar Amount:</h4>
-            <p>$ <%= dollarAmount %></p>                 
+            <p>$ <%= dollarAmount %></p>
           </div>
-        </div> 
+        </div>
         </script>
-        
+
         <script type="text/template" id="single-entry">
          <div class="clearfix form-intro">
           <h3 class="pull-left">Sugar Injection <%= transferNumber %></h3>
           <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs pull-right">Remove</button>
          </div>
-       
+
          <div class="form-group">
           <label for="">Candy Type</label>
           <input id="" name="candyType" class="form-control" placeholder="e.g. Nerd Rope" maxLength="28" value="<%= candyType %>" type="text">
-         </div> 
+         </div>
 
          <div class="form-group">
            <label for="">Candy Profile</label>
@@ -82,10 +93,10 @@
              <option>Caramel</option>
              <option>Rainbow Sweet</option>
              <option>Taffy</option>
-             <option>Elf Powder</option> 
+             <option>Elf Powder</option>
              <option>Tarts</option>
              <option>Licorice</option>
-             <option>"Smart" Tart</option> 
+             <option>"Smart" Tart</option>
              <option>Lollipop/Sucker</option>
              <option>"Rancher"</option>
              <option>Spicy Gummies</option>
@@ -95,24 +106,22 @@
             </select>
          </div>
          <div class="form-group">
-         
+
             <span class="legend">Sweet</span><input type="range" name="sourRatio" min="0" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>
          </div>
 
          <div class="form-group">
            <label for="">Number of Pieces</label>
-           <input name="number" class="form-control" id="" placeholder="" value="<%= number %>" maxLength="25" type="tel">            
+           <input name="number" class="form-control" id="" placeholder="" value="<%= number %>" maxLength="25" type="tel">
          </div>
          <div class="form-group">
            <label for="">US Dollar Amount</label>
-           $ <input class="form-control" name="dollarAmount" id="" placeholder="" value="<%= dollarAmount %>" type="tel">                 
+           $ <input class="form-control" name="dollarAmount" id="" placeholder="" value="<%= dollarAmount %>" type="tel">
          </div>
          </script>
-         
-         <div id="form-controls">
-         </div> 
-         
-         <script type="text/template" id="sugar-injection-controls">
+
+
+          <script type="text/template" id="sugar-injection-controls">
            <p><a href="#" data-trigger="add-sugar-injection">+ Add Another Sugar Injection</a></p>
            <p>Are you sure someone should eat all of that? Let's verify.</p>
            <button type="button" class="btn btn-primary" id="confirmBt">Next</button>
@@ -121,24 +130,19 @@
 
          <script type="text/template" id="sugar-injection-confirm-controls">
            <button type="button" class="btn btn-primary" id="saveTransfers">Save</button>
-           <a href="#" id="editTransfers">Edit</a> 
-         </script>  
-        
+           <a href="#" id="editTransfers">Edit</a>
+         </script>
 
-      </form>
-          
-
-
-
-   </div>
-  </div>
+          <script type="text/template" id="sugar-injection-confirm-header">
+           <p>Here's what we have so far...</p>
+          </script>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
   <script type="text/javascript" src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.0/backbone.localStorage-min.js"></script>  
-  
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.0/backbone.localStorage-min.js"></script>
+
   <script src="/scripts/main.js"></script>
   <script src="/scripts/models/models.js"></script>
   <script src="/scripts/collections/transfers.js"></script>
@@ -149,6 +153,6 @@
   <script src="/scripts/views/ApplicationView.js"></script>
 
 
-  
+
 </body>
 </html>
