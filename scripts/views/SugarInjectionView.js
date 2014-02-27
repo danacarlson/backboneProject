@@ -7,7 +7,8 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
     'click #confirmBt' : 'confirmTransfers'
   },
 
-  initialize: function () { 
+  initialize: function () {
+   
     this.listenTo(this.collection, 'add', this.onAddTransfer);
     this.listenTo(this.collection, 'remove', this.renumberTransfers);
 
@@ -21,8 +22,10 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
   render : function() { 
     var staticControls = _.template( $("#sugar-injection-controls").html());
       this.$el.find('#form-controls').append(staticControls);
-      return this;
+      this.$el.find('#form-header').html('');
+      return this; 
   },
+
 
   addBlankTransfer: function(e) {
     if (e) {  e.preventDefault(); }     
@@ -31,9 +34,11 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
   
   confirmTransfers: function(model) {
     var confirmView;
+    
+   //i need to clean up my views.
+    
     $(this.el).find('#entry-container, #form-controls').html('');
     confirmView = new candyTransfer.Views.SugarInjectionConfirm({ model: model, collection: this.collection });
-    
     return this;
   },
   

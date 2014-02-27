@@ -3,7 +3,8 @@ candyTransfer.Views.SugarInjectionConfirm = Backbone.View.extend({
   el : "#main",
   
   events: {
-    'click #saveTransfers' : 'saveTransfers' 
+    'click #saveTransfers' : 'saveTransfers',
+    'click #editTransfers' : 'editTransfers' 
   },
 
   initialize: function () {
@@ -12,6 +13,7 @@ candyTransfer.Views.SugarInjectionConfirm = Backbone.View.extend({
      currentCollection = this.collection;
      
     this.render();
+   
     
     this.collection.each(function(model) {
       var confirmView = new candyTransfer.Views.ConfirmView({ model: model, collection: currentCollection });
@@ -25,8 +27,8 @@ candyTransfer.Views.SugarInjectionConfirm = Backbone.View.extend({
   render : function () {
     var staticControls = _.template( $("#sugar-injection-confirm-controls").html()),
       staticHeader =  _.template( $("#sugar-injection-confirm-header").html());      
-      this.$el.find('#form-controls').append(staticControls); 
-      this.$el.find('h2').after(staticHeader);    
+      this.$el.find('#form-controls').html('').append(staticControls); 
+      this.$el.find('#form-header').html('').append(staticHeader);    
       return this; 
   },
   
@@ -53,6 +55,18 @@ candyTransfer.Views.SugarInjectionConfirm = Backbone.View.extend({
     if (e) { e.preventDefault(); }
     //ideally there would be some front end validation here
     Backbone.sync('create', this.collection);
+  },
+  
+  editTransfers : function (e, model) {
+
+    $(this.el).find('#entry-container, #form-controls, #form-header').html('');
+    $(this.el).find('#confirm-header').remove(); 
+
+    var initialView = new candyTransfer.Views.SugarInjectionView({ model: model, collection: this.collection });
+    
+    initialView.renumberTransfers();
+    
+    return this;
   }
 
 });
