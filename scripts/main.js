@@ -7,7 +7,7 @@ window.candyTransfer = {
   Routers: {},
 
   init: function() {
-    new candyTransfer.Views.ApplicationView({el: '#main'});
+    new candyTransfer.Views.ApplicationView();
   }
 };
 

@@ -1,6 +1,6 @@
 candyTransfer.Views.ApplicationView = Backbone.View.extend({
 
-  //el : "#main",
+  el : "#main",
 
   views: {
     'sugarInjection' : ''
@@ -21,12 +21,17 @@ candyTransfer.Views.ApplicationView = Backbone.View.extend({
       };
 
     this.views.sugarInjection = new V.SugarInjectionView(opts);
-    this.$el.append(this.views.sugarInjection.el)
-    //this.views.sugarInjectionConfirm = new V.SugarInjectionConfirm(opts);
+    this.$el.append(this.views.sugarInjection.el);
   },
 
-  onConfirm: function () {
+  onConfirm: function () { 
+    var innerDiv = document.createElement('div');
+    
     this.views.sugarInjection.remove();
+    this.views.sugarInjection.undelegateEvents();
+    innerDiv.id = "inner";
+    $(innerDiv).append('<div id="form-header">').append('<div id="entry-container">').append('<div id="form-controls">');
+    this.$el.append(innerDiv);
 
     var V = candyTransfer.Views,
       opts = {
@@ -34,7 +39,7 @@ candyTransfer.Views.ApplicationView = Backbone.View.extend({
         app: this
       };
     this.views.sugarInjectionConfirm = new V.SugarInjectionConfirm(opts);
-    this.$el.append(this.views.sugarInjectionConfirm.el)
+    this.$el.append(this.views.sugarInjectionConfirm.el);
   }
 
 });

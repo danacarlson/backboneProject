@@ -1,6 +1,6 @@
 candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
 
-  //el : "#main",
+  el : "#inner",
 
   events: {
     'click [data-trigger="add-sugar-injection"]' : 'addBlankTransfer',
@@ -8,7 +8,6 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
   },
 
   initialize: function (opts) {
-    console.log('initialize');
     this.app = opts.app;
     this.listenTo(this.collection, 'add', this.onAddTransfer);
     this.listenTo(this.collection, 'remove', this.renumberTransfers);
@@ -21,11 +20,8 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
   },
 
   render : function() {
-    console.log('render');
-    console.log(this.$el);
     var staticControls = _.template( $("#sugar-injection-controls").html());
       this.$el.find('#form-controls').append(staticControls);
-      //this.$el.find('#form-header').html('');
       return this;
   },
 
@@ -65,7 +61,6 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
   },
 
   onAddTransfer : function (model) {
-    console.log('add');
       var view = new candyTransfer.Views.EntryView({ model: model, collection: this.collection });
       view.render();
       this.$el.find('#entry-container').append(view.el);

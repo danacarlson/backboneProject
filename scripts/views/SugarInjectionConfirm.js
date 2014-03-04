@@ -1,17 +1,18 @@
 candyTransfer.Views.SugarInjectionConfirm = Backbone.View.extend({
 
-  //el : "#main",
+  el : "#inner",
 
   events: {
     'click #saveTransfers' : 'saveTransfers',
     'click #editTransfers' : 'editTransfers'
   },
 
-  initialize: function () {
+  initialize: function (opts) {  
+    
     var view,
      el = this.$el,
      currentCollection = this.collection;
-
+    this.app = opts.app;
     this.render();
 
 
