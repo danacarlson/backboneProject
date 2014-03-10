@@ -26,11 +26,8 @@ candyTransfer.Views.SugarInjectionConfirm = Backbone.View.extend({
   },
 
   render : function () {
-    var staticControls = _.template( $("#sugar-injection-confirm-controls").html()),
-      staticHeader =  _.template( $("#sugar-injection-confirm-header").html());
-      this.$el.find('#form-controls').html('').append(staticControls);
-      this.$el.find('#form-header').html('').append(staticHeader);
-      return this;
+    var confirmTemplate = _.template( $("#sugar-injection-confirm-template").html());    
+    this.$el.append(confirmTemplate);
   },
 
   renumberTransfers : function () {
@@ -59,15 +56,7 @@ candyTransfer.Views.SugarInjectionConfirm = Backbone.View.extend({
   },
 
   editTransfers : function (e, model) {
-
-    $(this.el).find('#entry-container, #form-controls, #form-header').html('');
-    $(this.el).find('#confirm-header').remove();
-
-    var initialView = new candyTransfer.Views.SugarInjectionView({ model: model, collection: this.collection });
-
-    initialView.renumberTransfers();
-
-    return this;
+     this.app.trigger('edit'); 
   }
 
 });

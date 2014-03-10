@@ -4,16 +4,15 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
   
   events: {
     'click [data-trigger="remove-sugar-injection"]' : 'removeTransfer_onClick',
-    'change input, select' : 'input_onChange',
-    'click [data-trigger="edit-single"]' : 'editTransfer_onClick'
+    'change input, select' : 'input_onChange'
+    //'click [data-trigger="edit-single"]' : 'editTransfer_onClick'
   },
 
   initialize: function() {
-    this.setElement(this.el);
     this.listenTo(this.collection, 'remove', this.onRemoveEntry);
   }, 
 
-  render: function () { 
+  render: function () {
     this.$el.html(this.template(this.model.toJSON()));
     this.setSelects(this.model);
     return this;
@@ -55,14 +54,6 @@ candyTransfer.Views.EntryView = Backbone.View.extend({
 
     obj[input.name] = $(input).val();
     this.model.set(obj);
-  },
-  
-  editTransfer_onClick : function(e) { 
-    if (e) { e.preventDefault(); } 
-   /* this.template = this.entryTemplate;
-    this.$el.html(this.template(this.model.toJSON()));
-    this.setSelects(this.model);
-    return this;  */
   }
 
 });

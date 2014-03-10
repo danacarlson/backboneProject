@@ -7,27 +7,8 @@
 </head>
 <body> 
   
-  <div class="container" id="main">
-     
-     <div class="inner" id="inner">
-      <h2>Candy Transfer</h2>
-      <div id="form-header">
-      </div>
-
-      <form role="form">
-        <div id="entry-container">
-        </div>
-
-
-
-         <div id="form-controls">
-         </div>
-
-      </form>
-
-
-
-
+  <div class="container" id="main">       
+   <div class="inner" id="inner">
    </div>
   </div>
 
@@ -72,72 +53,139 @@
         </div>
         </script>
 
-        <script type="text/template" id="single-entry">
-         <div class="clearfix form-intro">
-          <h3 class="pull-left">Sugar Injection <%= transferNumber %></h3>
-          <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs pull-right">Remove</button>
-         </div>
+         <!--BEGIN: sugar injection view-->
+         <script type="text/template" id="sugar-injection-view-template">
+          <h2>Candy Transfer</h2>
+          <div id="form-header"></div>
 
-         <div class="form-group">
-          <label for="">Candy Type</label>
-          <input id="" name="candyType" class="form-control" placeholder="e.g. Nerd Rope" maxLength="28" value="<%= candyType %>" type="text">
-         </div>
-
-         <div class="form-group">
-           <label for="">Candy Profile</label>
-           <select class="form-control" name="candyProfile">
-             <option>Nougat</option>
-             <option>Chocolate</option>
-             <option>Nuts</option>
-             <option>Gummies</option>
-             <option>Jellies</option>
-             <option>Artificial</option>
-             <option>Caramel</option>
-             <option>Rainbow Sweet</option>
-             <option>Taffy</option>
-             <option>Elf Powder</option>
-             <option>Tarts</option>
-             <option>Licorice</option>
-             <option>"Smart" Tart</option>
-             <option>Lollipop/Sucker</option>
-             <option>"Rancher"</option>
-             <option>Spicy Gummies</option>
-             <option>Chewing Gum</option>
-             <option>Rope/String/Chew</option>
-             <option>Chewy</option>
-            </select>
-         </div>
-         <div class="form-group">
-
-            <span class="legend">Sweet</span><input type="range" name="sourRatio" min="0" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>
-         </div>
-
-         <div class="form-group">
-           <label for="">Number of Pieces</label>
-           <input name="number" class="form-control" id="" placeholder="" value="<%= number %>" maxLength="25" type="tel">
-         </div>
-         <div class="form-group">
-           <label for="">US Dollar Amount</label>
-           $ <input class="form-control" name="dollarAmount" id="" placeholder="" value="<%= dollarAmount %>" type="tel">
-         </div>
+          <form role="form">
+            <div id="entry-container"></div>
+            <div id="form-controls">
+              <p><a href="#" data-trigger="add-sugar-injection">+ Add Another Sugar Injection</a></p>
+              <p>Are you sure someone should eat all of that? Let's verify.</p>
+              <button type="button" class="btn btn-primary" id="confirmBt">Next</button>
+              <a href="#">Start Over</a>
+            </div>
+          </form>
          </script>
-
-
-          <script type="text/template" id="sugar-injection-controls">
-           <p><a href="#" data-trigger="add-sugar-injection">+ Add Another Sugar Injection</a></p>
-           <p>Are you sure someone should eat all of that? Let's verify.</p>
-           <button type="button" class="btn btn-primary" id="confirmBt">Next</button>
-           <a href="#">Start Over</a>
+         <!--END: sugar injection view-->
+         
+         <!--BEGIN: sugar injection confirm view-->
+         <script type="text/template" id="sugar-injection-confirm-template"> 
+          <h2>Candy Transfer</h2>
+          <div id="form-header">
+            <p>Here's what we have so far...</p> 
+          </div>
+          <form role="form">
+            <div id="entry-container"></div>
+            <div id="form-controls">
+              <button type="button" class="btn btn-primary" id="saveTransfers">Save</button>
+              <a href="#" id="editTransfers">Edit</a>
+            </div>
+          </form>
          </script>
+         <!--END: sugar injection confirm view-->
+         
+         <!--BEGIN: sugar injection single entry-->
+         <script type="text/template" id="single-entry">
+          <div class="clearfix form-intro">
+           <h3 class="pull-left">Sugar Injection <%= transferNumber %></h3>
+           <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs pull-right">Remove</button>
+          </div>
 
-         <script type="text/template" id="sugar-injection-confirm-controls">
-           <button type="button" class="btn btn-primary" id="saveTransfers">Save</button>
-           <a href="#" id="editTransfers">Edit</a>
-         </script>
+          <div class="form-group">
+           <label for="">Candy Type</label>
+           <input id="" name="candyType" class="form-control" placeholder="e.g. Nerd Rope" maxLength="28" value="<%= candyType %>" type="text">
+          </div>
 
-          <script type="text/template" id="sugar-injection-confirm-header">
-           <p>Here's what we have so far...</p>
-          </script>
+          <div class="form-group">
+            <label for="">Candy Profile</label>
+            <select class="form-control" name="candyProfile">
+              <option>Nougat</option>
+              <option>Chocolate</option>
+              <option>Nuts</option>
+              <option>Gummies</option>
+              <option>Jellies</option>
+              <option>Artificial</option>
+              <option>Caramel</option>
+              <option>Rainbow Sweet</option>
+              <option>Taffy</option>
+              <option>Elf Powder</option>
+              <option>Tarts</option>
+              <option>Licorice</option>
+              <option>"Smart" Tart</option>
+              <option>Lollipop/Sucker</option>
+              <option>"Rancher"</option>
+              <option>Spicy Gummies</option>
+              <option>Chewing Gum</option>
+              <option>Rope/String/Chew</option>
+              <option>Chewy</option>
+             </select>
+          </div>
+          <div class="form-group">
+
+             <span class="legend">Sweet</span><input type="range" name="sourRatio" min="0" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>
+          </div>
+
+          <div class="form-group">
+            <label for="">Number of Pieces</label>
+            <input name="number" class="form-control" id="" placeholder="" value="<%= number %>" maxLength="25" type="tel">
+          </div>
+          <div class="form-group">
+            <label for="">US Dollar Amount</label>
+            $ <input class="form-control" name="dollarAmount" id="" placeholder="" value="<%= dollarAmount %>" type="tel">
+          </div>
+          </script><script type="text/template" id="single-entry">
+           <div class="clearfix form-intro">
+            <h3 class="pull-left">Sugar Injection <%= transferNumber %></h3>
+            <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs pull-right">Remove</button>
+           </div>
+
+           <div class="form-group">
+            <label for="">Candy Type</label>
+            <input id="" name="candyType" class="form-control" placeholder="e.g. Nerd Rope" maxLength="28" value="<%= candyType %>" type="text">
+           </div>
+
+           <div class="form-group">
+             <label for="">Candy Profile</label>
+             <select class="form-control" name="candyProfile">
+               <option>Nougat</option>
+               <option>Chocolate</option>
+               <option>Nuts</option>
+               <option>Gummies</option>
+               <option>Jellies</option>
+               <option>Artificial</option>
+               <option>Caramel</option>
+               <option>Rainbow Sweet</option>
+               <option>Taffy</option>
+               <option>Elf Powder</option>
+               <option>Tarts</option>
+               <option>Licorice</option>
+               <option>"Smart" Tart</option>
+               <option>Lollipop/Sucker</option>
+               <option>"Rancher"</option>
+               <option>Spicy Gummies</option>
+               <option>Chewing Gum</option>
+               <option>Rope/String/Chew</option>
+               <option>Chewy</option>
+              </select>
+           </div>
+           <div class="form-group">
+
+              <span class="legend">Sweet</span><input type="range" name="sourRatio" min="0" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>
+           </div>
+
+           <div class="form-group">
+             <label for="">Number of Pieces</label>
+             <input name="number" class="form-control" id="" placeholder="" value="<%= number %>" maxLength="25" type="tel">
+           </div>
+           <div class="form-group">
+             <label for="">US Dollar Amount</label>
+             $ <input class="form-control" name="dollarAmount" id="" placeholder="" value="<%= dollarAmount %>" type="tel">
+           </div>
+           </script>
+           <!--END: sugar injection single entry-->
+        
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

@@ -8,39 +8,40 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
   },
 
   initialize: function (opts) {
+    var currentCollection = this.collection,
+     container = this.$el; 
+     
     this.app = opts.app;
+    this.render();
     this.listenTo(this.collection, 'add', this.onAddTransfer);
     this.listenTo(this.collection, 'remove', this.renumberTransfers);
 
     if (this.collection.length === 0) {
       this.addBlankTransfer();
     }
-
-    this.render();
+    else {
+       this.collection.each(function(model) { 
+        var entryView = new candyTransfer.Views.EntryView({ model: model, collection: currentCollection });
+        entryView.render();
+        container.find('#entry-container').append(entryView.el);
+      });
+    }
   },
 
   render : function() {
-    var staticControls = _.template( $("#sugar-injection-controls").html());
-      this.$el.find('#form-controls').append(staticControls);
-      return this;
+    var shellTemplate = _.template( $('#sugar-injection-view-template').html());
+    this.$el.append(shellTemplate);
+    return this;
   },
 
 
   addBlankTransfer: function(e) {
-
     if (e) {  e.preventDefault(); }
     this.collection.addBlankTransfer();
   },
 
   next_onClick: function() {
     this.app.trigger('confirm');
-
-   // var confirmView;
-   //i need to clean up my views.
-
-    //$(this.el).find('#entry-container, #form-controls').html('');
-    //confirmView = new candyTransfer.Views.SugarInjectionConfirm({ model: model, collection: this.collection });
-    //return this;
   },
 
   renumberTransfers : function () {
@@ -60,7 +61,7 @@ candyTransfer.Views.SugarInjectionView = Backbone.View.extend({
     return this;
   },
 
-  onAddTransfer : function (model) {
+  onAddTransfer : function (model) { 
       var view = new candyTransfer.Views.EntryView({ model: model, collection: this.collection });
       view.render();
       this.$el.find('#entry-container').append(view.el);
