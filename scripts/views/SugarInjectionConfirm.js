@@ -52,7 +52,8 @@ candyTransfer.Views.SugarInjectionConfirm = Backbone.View.extend({
   saveTransfers : function (e) {
     if (e) { e.preventDefault(); }
     //ideally there would be some front end validation here
-    Backbone.sync('create', this.collection);
+    //Backbone.sync('create', this.collection);
+    console.log('saving');
   },
 
   editTransfers : function (e, model) {

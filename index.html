@@ -12,48 +12,7 @@
    </div>
   </div>
 
-
-      <script type="text/template" id="confirm-entry">
-        <div class="readonly-group">
-          <div class="clearfix form-intro">
-           <h3 class="pull-left">Sugar Injection <%= transferNumber %></h3>
-           <span class="pull-right">
-            <!--<button type="button" data-trigger="edit-single" class="btn btn-xs">Edit</button>-->
-            <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs">Remove</button>
-           </span>
-          </div>
-
-          <div class="form-group">
-           <h4>Candy Type:</h4>
-           <p><%= candyType %></p>
-          </div>
-
-          <div class="form-group">
-            <h4>Candy Profile:</h4>
-            <p><%= candyProfile %></p>
-          </div>
-
-          <div class="form-group ratio">
-            <h4>Sweet:</h4>
-            <p></p>
-            <h4>Sour:</h4>
-            <p></p>
-             <!--<span class="legend">Sweet</span><input readonly type="range" name="sourRatio" min="1" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>-->
-          </div>
-
-          <div class="form-group">
-            <h4>Number of Pieces:</h4>
-            <p><%= number %></p>
-          </div>
-
-          <div class="form-group">
-            <h4>US Dollar Amount:</h4>
-            <p>$ <%= dollarAmount %></p>
-          </div>
-        </div>
-        </script>
-
-         <!--BEGIN: sugar injection view-->
+         <!--BEGIN: sugar injection view--> 
          <script type="text/template" id="sugar-injection-view-template">
           <h2>Candy Transfer</h2>
           <div id="form-header"></div>
@@ -69,23 +28,7 @@
           </form>
          </script>
          <!--END: sugar injection view-->
-         
-         <!--BEGIN: sugar injection confirm view-->
-         <script type="text/template" id="sugar-injection-confirm-template"> 
-          <h2>Candy Transfer</h2>
-          <div id="form-header">
-            <p>Here's what we have so far...</p> 
-          </div>
-          <form role="form">
-            <div id="entry-container"></div>
-            <div id="form-controls">
-              <button type="button" class="btn btn-primary" id="saveTransfers">Save</button>
-              <a href="#" id="editTransfers">Edit</a>
-            </div>
-          </form>
-         </script>
-         <!--END: sugar injection confirm view-->
-         
+                  
          <!--BEGIN: sugar injection single entry-->
          <script type="text/template" id="single-entry">
           <div class="clearfix form-intro">
@@ -135,57 +78,67 @@
             <label for="">US Dollar Amount</label>
             $ <input class="form-control" name="dollarAmount" id="" placeholder="" value="<%= dollarAmount %>" type="tel">
           </div>
-          </script><script type="text/template" id="single-entry">
-           <div class="clearfix form-intro">
-            <h3 class="pull-left">Sugar Injection <%= transferNumber %></h3>
-            <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs pull-right">Remove</button>
+          </script>
+          
+          <!--BEGIN: sugar injection confirm view-->
+          <script type="text/template" id="sugar-injection-confirm-template"> 
+           <h2>Candy Transfer</h2>
+           <div id="form-header">
+             <p>Here's what we have so far...</p> 
            </div>
+           <form role="form">
+             <div id="entry-container"></div>
+             <div id="form-controls">
+               <button type="button" class="btn btn-primary" id="saveTransfers">Save</button>
+               <a href="#" id="editTransfers">Edit</a>
+             </div>
+           </form>
+          </script>
+          <!--END: sugar injection confirm view-->
+          
+          <script type="text/template" id="confirm-entry">
+            <div class="readonly-group">
+              <div class="clearfix form-intro">
+               <h3 class="pull-left">Sugar Injection <%= transferNumber %></h3>
+               <span class="pull-right">
+                <!--<button type="button" data-trigger="edit-single" class="btn btn-xs">Edit</button>-->
+                <button type="button" data-trigger="remove-sugar-injection" class="btn btn-danger btn-xs">Remove</button>
+               </span>
+              </div>
 
-           <div class="form-group">
-            <label for="">Candy Type</label>
-            <input id="" name="candyType" class="form-control" placeholder="e.g. Nerd Rope" maxLength="28" value="<%= candyType %>" type="text">
-           </div>
+              <div class="form-group">
+               <h4>Candy Type:</h4>
+               <p><%= candyType %></p>
+              </div>
 
-           <div class="form-group">
-             <label for="">Candy Profile</label>
-             <select class="form-control" name="candyProfile">
-               <option>Nougat</option>
-               <option>Chocolate</option>
-               <option>Nuts</option>
-               <option>Gummies</option>
-               <option>Jellies</option>
-               <option>Artificial</option>
-               <option>Caramel</option>
-               <option>Rainbow Sweet</option>
-               <option>Taffy</option>
-               <option>Elf Powder</option>
-               <option>Tarts</option>
-               <option>Licorice</option>
-               <option>"Smart" Tart</option>
-               <option>Lollipop/Sucker</option>
-               <option>"Rancher"</option>
-               <option>Spicy Gummies</option>
-               <option>Chewing Gum</option>
-               <option>Rope/String/Chew</option>
-               <option>Chewy</option>
-              </select>
-           </div>
-           <div class="form-group">
+              <div class="form-group">
+                <h4>Candy Profile:</h4>
+                <p><%= candyProfile %></p>
+              </div>
 
-              <span class="legend">Sweet</span><input type="range" name="sourRatio" min="0" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>
-           </div>
+              <div class="form-group ratio">
+                <h4>Sweet:</h4>
+                <p></p>
+                <h4>Sour:</h4>
+                <p></p>
+                 <!--<span class="legend">Sweet</span><input readonly type="range" name="sourRatio" min="1" max="10" value="<%= sourRatio %>" class="form-control" /><span class="legend">Sour</span>-->
+              </div>
 
-           <div class="form-group">
-             <label for="">Number of Pieces</label>
-             <input name="number" class="form-control" id="" placeholder="" value="<%= number %>" maxLength="25" type="tel">
-           </div>
-           <div class="form-group">
-             <label for="">US Dollar Amount</label>
-             $ <input class="form-control" name="dollarAmount" id="" placeholder="" value="<%= dollarAmount %>" type="tel">
-           </div>
-           </script>
-           <!--END: sugar injection single entry-->
-        
+              <div class="form-group">
+                <h4>Number of Pieces:</h4>
+                <p><%= number %></p>
+              </div>
+
+              <div class="form-group">
+                <h4>US Dollar Amount:</h4>
+                <p>$ <%= dollarAmount %></p>
+              </div>
+            </div>
+            </script>
+            
+
+          
+          
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
